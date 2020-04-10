@@ -20,12 +20,12 @@ Containers are the organizational building blocks of your project. They allow yo
 Assets
 ======
 
-An Asset is anything that is consumed or created in your analysis. This includes raw data, calculated data, and images. Each Asset can have descriptors and metadata attached to it as well.
+An Asset is anything that is consumed or created in your analysis. This includes raw data, calculated data, and images. Each Asset can have descriptors and metadata attached to it.
 
 Scripts
 =======
 
-A Script is a multi-input, multi-output function where the inputs and outputs are Assets. The input to a script is *consumed* and the output is *produced*. The produced Assets can then be consumed by other Scripts in the future.
+A Script is a multi-input, multi-output function whose inputs and outputs are Assets. The input to a script is *consumed* and the output is *produced*. The produced Assets can then be consumed by other Scripts in the future.
 
 Descriptors
 -----------
@@ -56,4 +56,4 @@ Thot utilizes a tree structure to organize data. Properties of children are inhe
 Analysis
 ********
 
-Thot is based on the idea that data and analysis should be separated and data should never be modified. You can think of a Thot analysis script as a machine reads data manipulates them and creates new pieces of data.
+Thot is based on the idea that data and analysis should be separated and data should never be modified. You can think of a Thot Script as a machine that reads data, manipulates them, and creates new data.

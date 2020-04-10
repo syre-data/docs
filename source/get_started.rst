@@ -191,9 +191,9 @@ There are only two changes you need to make to convert a local analysis script i
 2. ``thot = LocalProject()`` |rarr| ``thot = ThotProject()`` 
 
 
-********
-Analysis
-********
+***************
+Writing Scripts
+***************
 
 Thot is founded on the idea that the same analysis needs to be run on different data sets. Often this is done manually, taking additional time and effort, and is prone to mistakes. By separating the analysis process from the data, Thot allows your data to be automatically analyzed.
 

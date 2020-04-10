@@ -16,7 +16,7 @@ Data management and analysis software.
    local_projects
    hosted_projects
    examples
-   api
+   api/index
 
 
 Indices and tables
