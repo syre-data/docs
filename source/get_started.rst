@@ -4,7 +4,7 @@
 Get Started
 ###########
 
-There are two types of project you can run with Thot: :ref:`Local<local_projects>` and :ref:`Hosted<hosted_projects>`. Local projects are run on your computer -- no internet connection or registration required. Hosted projects are run from the [Thot website][1] and provide additional functionality. If you have a Hosted account, you can sync your Local Projects with it, so data is automatically uploaded to the Thot servers and analyzed.
+There are two types of project you can run with Thot: :ref:`Local<local_projects>` and :ref:`Hosted<hosted_projects>`. Local projects are run on your computer -- no internet connection or registration required. Hosted projects are run from the `Thot website<http://www.thot-data.com>`_ and provide additional functionality. If you have a Hosted account, you can sync your Local Projects with it, so data is automatically uploaded to the Thot servers and analyzed.
 
 
 ********************
@@ -22,6 +22,9 @@ Local projects are just a set of folders and files on you computer. To tell Thot
 
 .. warning::
 	A folder can be either a Container or an Asset, not both.
+
+.. note::
+	You can use ``root:`` to refer to the root Container of the project. This allows the use  of absolute paths within the project. Instead of writing ``../../../path/to/file.csv`` you could write ``root:/path/to/file.csv``.
 
 _container.json
 ----------------
@@ -135,6 +138,9 @@ Utilities functions include some generic options that can be applied to all func
 .. warning::
 	Ensure that your JSON is properly quoted. You will likely have to place single quotes around the JSON string, and double quaotes around property keys and strings within the object. E.g. ``'{ "string_property": "test string", "boolean_property": true, "number_property": 42 }'``
 
+.. warning::
+	On Windows machines you can not have spaces within quoted text. This results in an ``unrecognized arguments`` error. Thus, the command should read ``'{"string_property":"test string","boolean_property":true,"number_property":42}'``
+
 Scripts
 ^^^^^^^
 
@@ -205,7 +211,7 @@ Because Thot separates the analysis from the data, you need a way to pull your d
 Because analysis is bottom-up, a script only has access to Containers and Assets below it.
 
 Thot Interface
-**************
+==============
 
 Each Thot Project implements a standard interface. This makes converting between Local and Hosted projects easy. A Thot Interface consists of the following structure.
 
@@ -228,7 +234,7 @@ Methods
 + **add_asset( asset [, id = None, overwrite = True] ):** Creates a new asset in the currently active Container. Returns the id of the new Asset. For a Local project the id is the absolute path to the Asset.
 
 Local Project
-*************
+=============
 
 A Local Project is a Thot Interface that uses your local file system as its database. During the analysis everything is performed relative to the active Container.
 
@@ -264,6 +270,7 @@ Testing Scripts
 ---------------
 
 You can test your scripts using the ``LocalHost.dev_mode()`` function along with passing in a test container to act as the temporary root of your project.
+
 .. code-block:: python
 
 	root_path = (
@@ -274,7 +281,7 @@ You can test your scripts using the ``LocalHost.dev_mode()`` function along with
 
 	thot = LocalProject( root_path )
 
-This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. the ``LocalProject.dev_mode()`` method returns ``True`` if the script is being run by the :ref:`runner`, and ``False`` if it's being run manualluy, i.e. from the console or within a Jupyter Notebook. 
+This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. The ``LocalProject.dev_mode()`` method returns ``True`` if the script is being run by the :ref:`runner`, and ``False`` if it's being run manually, i.e. from the console or within a Jupyter Notebook. 
 
 .. _runner:
 

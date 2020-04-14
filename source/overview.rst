@@ -10,7 +10,7 @@ Thot is based on **top-down organization** and **bottom-up analysis**, or, congr
 
 [images]
 
-There are three components of a Thot project: **Containers**, **Assets**, and **Scripts**.
+There are three types of Resources that make up a Thot project: **Containers**, **Assets**, and **Scripts**.
 
 Containers
 ==========
@@ -25,7 +25,13 @@ An Asset is anything that is consumed or created in your analysis. This includes
 Scripts
 =======
 
-A Script is a multi-input, multi-output function whose inputs and outputs are Assets. The input to a script is *consumed* and the output is *produced*. The produced Assets can then be consumed by other Scripts in the future.
+A Script is a multi-input, multi-output function whose inputs and outputs are Assets. The input to a script is *consumed* and the output is *produced*. Produced Assets can then be consumed by other Scripts in the future.
+
+
+Common Resource Properties
+==========================
+
+Each Resource can have these common properties associated with it. Each type of Resource may also have additional properties that can be associated to it.
 
 Descriptors
 -----------
@@ -41,7 +47,6 @@ Metadata
 --------
 
 Metadata is data about data. Children inherit metadata from their parents.
-
 
 
 ************

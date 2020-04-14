@@ -1,0 +1,17 @@
+{
+    "_id": null,
+    "created": "2020-04-14T09:55:55",
+    "type": "recipe",
+    "name": "Recipe A",
+    "description": null,
+    "roles": [],
+    "tags": [],
+    "notes": [],
+    "metadata": {
+        "recipe": "a"
+    },
+    "parent": null,
+    "children": [],
+    "assets": [],
+    "scripts": []
+}

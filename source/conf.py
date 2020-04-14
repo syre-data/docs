@@ -41,7 +41,8 @@ release = '0.0.4'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosectionlabel',
-    'recommonmark'
+    'sphinx.ext.mathjax',
+    'recommonmark',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -160,3 +161,4 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+numfig = True
