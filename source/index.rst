@@ -9,12 +9,12 @@ Data management and analysis software.
    :maxdepth: 2
    :caption: Contents:
 
-   overview
-   get_started
-   organization
-   analysis
    local_projects
    hosted_projects
+   overview
+   concepts
+   organization
+   analysis
    examples
    api/index
 

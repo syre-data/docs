@@ -8,9 +8,10 @@ thot = LocalProject()
 # get recipe container
 recipe = thot.find_container( { '_id': thot.root } )
 
-# get noise statistice data
+# get noise statistics data
 noise_stats = thot.find_assets( { 'type': 'noise-stats' } )
 
+# create combined dataframe 
 df = []
 for stat in noise_stats:
 	# read data for each batch
@@ -23,23 +24,20 @@ for stat in noise_stats:
 	
 	df.append( tdf )
 
-# combine into one dataframe
 df = pd.concat( df, axis = 1 )
 
-# plot the data
-
-# export the plot
-
-
 # compute recipe statistics
-stats = df
+mean = df.loc[ 'mean' ].mean() 
+std = df.loc[ 'std' ].pow( 2 ).sum()/ 4 
+
+stats = pd.DataFrame( [ mean, std ], index = ( 'mean', 'std' ) )
 
 # export recipe statistics
 stat_properties = {
 	'name': '{} Statistics'.format( recipe.name ),
 	'type': 'recipe-stats',
-	'file': 'recipe-stats.csv'
+	'file': 'recipe-stats.pkl'
 }
 
 stats_path = thot.add_asset( stat_properties, 'recipe_stats' )
-stats.to_csv( stats_path )
+stats.to_pickle( stats_path )

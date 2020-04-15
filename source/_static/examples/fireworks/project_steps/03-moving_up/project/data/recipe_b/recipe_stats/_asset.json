@@ -1,7 +1,7 @@
 {
     "name": "Recipe B Statistics",
     "type": "recipe-stats",
-    "file": "recipe-stats.csv",
+    "file": "recipe-stats.pkl",
     "creator_type": "script",
     "creator": "/home/bric/Dropbox/Documents/www/thot/lib/docs/source/_static/examples/fireworks/project_steps/03-moving_up/project/analysis/recipe_stats.py"
 }

@@ -1,0 +1,11 @@
+{
+    "name": "Recipe Comparison",
+    "type": "recipe-bar-chart",
+    "tags": [
+        "chart",
+        "image"
+    ],
+    "file": "recipe_comparison.png",
+    "creator_type": "script",
+    "creator": "/home/bric/Dropbox/Documents/www/thot/lib/docs/source/_static/examples/fireworks/project_steps/03-moving_up/project/analysis/recipe_comparison.py"
+}

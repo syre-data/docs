@@ -1,8 +1,8 @@
 .. include:: <isonum.txt>
 
-###########
-Get Started
-###########
+################
+Concepts of Thot
+################
 
 There are two types of project you can run with Thot: :ref:`Local<local_projects>` and :ref:`Hosted<hosted_projects>`. Local projects are run on your computer -- no internet connection or registration required. Hosted projects are run from the `Thot website <http://www.thot-data.com>`_ and provide additional functionality. If you have a Hosted account, you can sync your Local Projects with it, so data is automatically uploaded to the Thot servers and analyzed.
 

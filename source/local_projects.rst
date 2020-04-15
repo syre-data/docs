@@ -319,7 +319,50 @@ Now let's analyze the entrie project by running ``python -m thot.runner`` again.
 Moving On Up
 ============
 
-Coming soon...
+Now that we have the statistics for each of our batches we can move up one level in our project tree to compile the statistics for each recipe. Let's first make the analysis script calling it ``recipe_stats.py``.
 
+.. literalinclude:: _static/examples/fireworks/project_steps/03-moving_up/project/analysis/recipe_stats.py
+	:language: python
+	:caption: recipe_stats.py
+	:linenos:
 
-.. 	
+Let's look at some of the new things we did here:
+
++ **line 9:** Get the Container the script is running in. In this case it will be Recipe A and Recipe B.
+
++ **line 12:** When analyzing the batches we only had one Asset we wanted to use, so used teh ``find_asset()`` method. Now we want to pull in both ``noise_stats`` Assets, so use the ``find_assets()`` method, which returns a list of Assets that match the criteria. Also notice that the ``noise_stats`` aren't in teh Recipe Containers directly, but are in the batch children Containers. This highlights a very important point: **Containers have access to their Assets as well as all their childrens' Assets.**
+
++ **line 16-23:** Iterate over each ``noise_stats`` Asset, creating a Pandas DataFrame from it, and adding it to the data list to be combined in line 27.
+
++ **line 37:** Use the name of the Container as part of the name for the new Asset. 
+
++ **line 43:** Export the new Asset, this time as a pickle (.pkl) file. This is a binary format used by Pandas to store DataFrames, making importing them later on easier.
+
+Let's add this new script to run on our recipe Containers, and then run it. From the project root run
+
+.. code-block:: bash
+
+	python -m thot.utilities add_scripts -s '{ "type": "recipe" }' --scripts '{ "script": "root:/../analysis/recipe_stats.py" }'
+
+	python -m thot.runner
+
+Let's build our final analysis script now so we can see which recipe is better. In the analysis folder create the ``recipe_comparison.py`` script.
+
+.. literalinclude::  _static/examples/fireworks/project_steps/03-moving_up/project/analysis/recipe_comparison.py
+	:language: python
+	:caption: recipe_comparison.py
+	:linenos:
+
+Let's breakdown the new concepts:
+
++ **line 14:** Use the recipe metadata from the Asset to name the data.
+
++ **line 28, 44:** We;ve already seen that we can pull in multiple Assets into our scripts. here we also see that we can create multiple Assets in a single script. Also notice that one Asset is a CSV text file, while the other is a PNG image file. Assets can be any sort of file.
+
+Add the proper Script Association (``_scripts.json``) to the root folder, and analyze the project. Take a look at the Assets we created so we know which recipe is quiter.
+
+Congratulations! You just built your first Thot project, building it from scratch and analyzing the data to come to a final conclusion. We've only touched on the functionality of Thot, and with such a small project it's hard to get a sense of the power thot gives you in analyzing larger projects. To learn more about this you can go through the advanced tutorial (coming soon) and learn even more.
+
+.. only:: builder_html
+
+	:download:`Click Here to download the final project. <_static/examples/fireworks/project_steps/03-moving_up/project/project.zip>`
