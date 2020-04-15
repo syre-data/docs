@@ -1,0 +1,15 @@
+{
+    "_id": null,
+    "created": "2020-04-14T20:07:42",
+    "type": "noise-data",
+    "name": "Noise Data",
+    "description": null,
+    "roles": [],
+    "tags": [],
+    "notes": [],
+    "metadata": {},
+    "file": "data.csv",
+    "parent": null,
+    "creator": null,
+    "creator_type": null
+}

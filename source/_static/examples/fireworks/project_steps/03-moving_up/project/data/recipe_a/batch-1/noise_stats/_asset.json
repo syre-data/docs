@@ -1,0 +1,7 @@
+{
+    "name": "Noise Statistics",
+    "type": "noise-stats",
+    "file": "noise-stats.csv",
+    "creator_type": "script",
+    "creator": "/home/bric/Dropbox/Documents/www/thot/lib/docs/source/_static/examples/fireworks/project_steps/03-moving_up/project/analysis/noise_stats.py"
+}

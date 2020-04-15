@@ -1,0 +1,9 @@
+{
+    "created": "2020-04-14T09:55:55",
+    "type": "recipe",
+    "name": "Recipe A",
+    "description": null,
+    "metadata": {
+        "recipe": "a"
+    }
+}

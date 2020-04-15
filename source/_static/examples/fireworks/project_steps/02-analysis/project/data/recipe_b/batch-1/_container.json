@@ -1,0 +1,17 @@
+{
+    "_id": null,
+    "created": "2020-04-14T09:57:22",
+    "type": "batch",
+    "name": "Batch 1",
+    "description": null,
+    "roles": [],
+    "tags": [],
+    "notes": [],
+    "metadata": {
+        "batch": "1"
+    },
+    "parent": null,
+    "children": [],
+    "assets": [],
+    "scripts": []
+}

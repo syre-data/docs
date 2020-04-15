@@ -1,0 +1,5 @@
+[
+    {
+        "script": "root:/../analysis/noise_stats.py"
+    }
+]

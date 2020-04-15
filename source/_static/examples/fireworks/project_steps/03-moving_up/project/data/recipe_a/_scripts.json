@@ -1,0 +1,7 @@
+[
+    {
+        "script": "root:/../analysis/recipe_stats.py",
+        "priority": 0,
+        "autorun": true
+    }
+]

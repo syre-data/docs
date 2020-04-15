@@ -15,6 +15,10 @@ Thot requires Python (v3) which you can get from the `official Python site <http
 	python -m pip install thot-data
 
 
+.. note::
+	We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
+
+
 ***********************
 Organizing Your Project
 ***********************
@@ -226,3 +230,96 @@ This will add three new Assets to your project. You can examine one of these new
 .. only:: builder_html
 
 	:download:`Click Here to download this project step. <_static/examples/fireworks/project_steps/01-assets/project/project.zip>`
+
+******************
+Analyzing the Data
+******************
+
+Now for the fun to start! Let's create our first analysis script. Create a new file in the ``analysis`` folder called ``noise_stats.py``. Copy and paste the following code into the file.
+
+.. literalinclude:: _static/examples/fireworks/project_steps/02-analysis/project/analysis/noise_stats.py
+	:language: python
+	:caption: noise_stats.py
+	:linenos:
+
+Let's go through and break down what each chunk of code is doing.
+
+.. TODO [5]: Format table
+.. .. list-table::
+.. 	:class: fixed-width
+.. 	:header-rows: 1
+
+.. 	* - Line No.
+.. 	  - Description
+.. 	* - 2-3
+.. 	  - Import the packages we're goin to use, namely Pandas and Thot. In this case we only need to use a small part: LocalProject.
+.. 	* - 6
+.. 	  - Initialize the Thot project, giving us access to all the data stored within it.
+.. 	* - 9
+.. 	  - Find the Noise Data Asset we made for each batch by search for Assets who have a ``type`` of 'noise-data'.
+.. 	* - 12
+.. 	  - Load the noise data into a Pandas DataFrame.
+.. 	* - 15
+.. 	  - Compute statistics on the noise data.
+.. 	* - 18-24
+.. 	  - Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as it's second argument an ``_id`` for the new Asset.
+.. 	* - 27
+.. 	  - Save the statistics to the new Asset.
+
+
++ **lines 2-3:** Import the packages we're goin to use, namely Pandas and Thot. In this case we only need to use a small part: LocalProject.
+
++ **line 6:** Initialize the Thot project, giving us access to all the data stored within it.
+
++ **line 9:** Find the Noise Data Asset we made for each batch by search for Assets who have a ``type`` of 'noise-data'.
+
++ **line 12:** Load the noise data into a Pandas DataFrame.
+
++ **line 15:** Compute statistics on the noise data.
+
++ **lines 18-24:** Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as it's second argument an ``_id`` for the new Asset.
+
++  **line 27:** Saves the statistics to the new Asset.
+
+Now we need to tell Thot which Containers to run this script from. This is done by creating Script Associations. We'll start off again creating one by hand, then see how to automate the process using the Utilities.
+
+
+Navigate to the **Recipe A > Batch 1** Container. We create Script Associations by placing a ``_scripts.json`` file in a Container. Go ahead and create this file and paste the contents below inside it.
+
+.. code-block:: JSON
+
+	[
+		{
+			"script": "root:/../analysis/noise_stats.py"
+		}
+	]
+
+This tells Thot to run the ``noise_stats.py`` script from this Container. The ``script`` field is the path to the script to run, it can be a relative or absolute path. The special ``root:`` directive points to the project root.
+
+Before adding the script to the rest of the batches, let's try it out.
+
+.. code-block:: bash
+	
+	python -m thot.runner
+
+You should see the ``noise_stats`` Asset be added to the folder. Great! Now let's make it so we analyze all the batches. Navigate to the project root (``data`` folder) and run
+
+.. code-block:: bash
+	
+	python -m thot.utilities set_scripts -s '{ "type": "batch" }' --scripts '[ { "script": "root:/../analysis/noise_stats.py" } ]'
+
+You'll notice that we replaced the ``--search`` flag from the previous command like this with the ``-s`` flag. The two are synonyms for each other, ``-s`` just giving us a shorthand for ``--search``. 
+
+Now let's analyze the entrie project by running ``python -m thot.runner`` again. This will create a new Noise Statistics Asset for each of the batches.
+
+.. only:: builder_html
+
+	:download:`Click Here to download this project step. <_static/examples/fireworks/project_steps/02-analysis/project/project.zip>`
+
+Moving On Up
+============
+
+Coming soon...
+
+
+.. 	
