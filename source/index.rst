@@ -6,15 +6,12 @@ Data management and analysis software.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   local_projects
-   hosted_projects
    overview
+   get_started/index
    concepts
-   organization
-   analysis
    examples
    api/index
 
