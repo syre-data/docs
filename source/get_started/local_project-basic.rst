@@ -1,8 +1,10 @@
+.. include:: <isonum.txt>
+
 ####################
 Local Project: Basic
 ####################
 
-Congratualations! You've just been hired as the head of the R+D department at Puzzles Underwater Fireworks company. The city's aquarium just hired us for their annual New Year's Eve extravaganza, and they want to do something extra special this year: fireworks for the fish. Luckily, our team has been working hard for the past six months on two new recipes for silent explosions. A perfect solution so the fish don't get scared. Looks like your first project will be to compare the two recipes to see which is quieter. Good Luck!
+Congratulations! You've just been hired as the head of the R+D department at Puzzles Underwater Fireworks company. The city's aquarium just hired us for their annual New Year's Eve extravaganza, and they want to do something extra special this year: fireworks for the fish. Luckily, our team has been working hard for the past six months on two new recipes for silent explosions. A perfect solution so the fish don't get scared. Looks like your first project will be to compare the two recipes to see which is quieter. Good Luck!
 
 ************
 Getting Thot
@@ -39,7 +41,7 @@ For this project the most important thing we need to test is which recipe is qui
 Setting Up Your Project Tree
 ****************************
 
-Local projects use your file system as a database. We will begin by making a folder for the project. Let's call it ``silent_fireworks``. One of the main philosphies behind Thot is that data and analysis should be separate. Let's reflect this in our project by creating a ``data`` folder and a ``analysis`` folder.
+Local projects use your file system as a database. We will begin by making a folder for the project. Let's call it ``fireworks``. One of the main philosphies behind Thot is that data and analysis should be separate. Let's reflect this in our project by creating a ``data`` folder and a ``analysis`` folder.
 
 We will build our project tree in two ways. First, we'll create the tree for Recipe A by hand, to get a sense of how Thot uses our folders as a database. And second, we will use Thot's Utilities package to build the tree for Recipe B, automating the process.
 
@@ -49,7 +51,7 @@ Recipe A
 Move into the ``data`` folder. Here we will add a file called ``_container.json``. Adding this file to a folder tells Thot that this folder is a Container. What do Containers do? Well, they Contain things. Namely, they can contain other Containers, Assets, and Script Associations. We'll get to the Assets and Script Associations later on.
 
 .. code-block:: JSON
-	:caption: /_container.json
+	:caption: _container.json
 
 	{
 		"name": "Silent Fireworks",
@@ -58,9 +60,9 @@ Move into the ``data`` folder. Here we will add a file called ``_container.json`
 	}
 
 .. note::
-	JSON is a very strict language. Make sure everything is double quoted and there are no stray commas.
+	JSON is a very strict format. Make sure everything is double quoted and there are no stray commas.
 
-Great! the ``data`` frler is now considered the ``root`` of our project because it is the highest Container. Now let's add the Container for Recipe A. Make a folder called ``recipe-a`` and add a ``_container.json`` file to it.
+Great! the ``data`` folder is now considered the ``root`` of our project because it is the highest Container. Now let's add the Container for Recipe A. Make a folder called ``recipe-a`` and add a ``_container.json`` file to it.
 
 .. code-block:: JSON
 	:caption: recipe-a/_container.json
@@ -122,18 +124,31 @@ Now that we have the hang of making Containers by hand, let's speed up the proce
 
 .. code-block:: bash
 	
+	# For Mac and Linux
 	python -m thot.utilities add_containers --search '{ "type": "project" }' --containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "b" } } }'
 
-.. warning::
-	If you are on a Windows machine Thot's Utilities do not currently work.
+	# For Windows
+	python -m thot.utilities add_containers --search "{ \"type\": \"project\" }" --containers "{ \"recipe-b\": { \"name\": \"Recipe B\", \"type\": \"recipe\", \"metadata\": { \"recipe\": \"b\" } } }"
 
-Let's see what this is doing. :code:`python -m thot.utilities` will run the Utilities for us. next we pass in the tool we want to use :code:`add_containers`. We then tell the tool which Container we want to add the new Containers to :code:`--search '{ "type": "project" }'`. Finally, we describe the Container we want to add :code:`--containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "a" } } }'`.
+
+.. note::
+	Windows does not interpret single quotes (') in the command line, so only double quotes can be used ("). Thus, to enclose strings double quotes must be used, and any double uotes inside the strings must be escaped with a backslash (\).
+
+	To convert from the Mac and Linux syntax to the Windows syntax, first escape all double quotes with a backslash ( ``"`` |rarr| ``\"``), then convert all single quotes into double quotes (``'`` |rarr| ``"``).
+
+	Throughout this tutorial the Mac and Linux command line syntax will be used, with some examples of the change for Windows. However, it is assumed after the first few examples, you can make the necessary adjustments to the examples yourself.
+
+Let's see what this is doing. :code:`python -m thot.utilities` will run the Utilities for us. Next we pass in the tool we want to use :code:`add_containers`. We then tell the tool which Container we want to add the new Containers to :code:`--search '{ "type": "project" }'`. Finally, we describe the Container we want to add :code:`--containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "a" } } }'`.
 
 This should have added a new folder to your project called ``recipe-b`` with the ``_container.json`` file already filled out. That didn't save us that much time, though. The real power comes when we need to add multiple Containers across our project. Let's try the same thing with the batches. 
 
 .. code-block:: bash
 	
+	# For Mac and Linux
 	python -m thot.utilities add_containers --search '{ "name": "Recipe B" }' --containers '{ "batch-1": { "name": "Batch 1", "type": "batch", "metadata": { "batch": 1 } }, "batch-2": { "name": "Batch 2", "type": "batch", "metadata": { "batch": 2 } } }'
+
+	# For Windows
+	python -m thot.utilities add_containers --search "{ \"name\": \"Recipe B\" }" --containers "{ \"batch-1\": { \"name\": \"Batch 1\", \"type\": \"batch\", \"metadata\": { \"batch\": 1 } }, \"batch-2\": { \"name\": \"Batch 2\", \"type\": \"batch\", \"metadata\": { \"batch\": 2 } } }"
 
 If you inspect one of the new ``_container.json`` files you'll notice many more properties than the ones we've explored so far. 
 
@@ -156,7 +171,7 @@ Great! We've now finished out
 	|			|__ _container.json
 	|__ analysis
 
-.. only :: builder_html
+.. only:: builder_html or readthedocs
 
 	:download:`Click Here to download this project step. </_static/examples/fireworks/project_steps/00-tree/project/project.zip>`
 
@@ -165,7 +180,7 @@ Adding Data to Your Project
 ***************************
 Now that we have our tree, we can add data. Most often data is added to the lowest level Containers in our project, because these are the things we actually run experiments on. Luckily our researchers just finished up with their experiments and have provided you with the download link. 
 
-.. only :: builder_html
+.. only:: builder_html or readthedocs
 
 	:download:`Click Here to download the results. </_static/examples/fireworks/project_steps/01-assets/experiment_data/data.zip>`
 
@@ -187,7 +202,7 @@ We want to add our Assets to the batches. Let's do the first by hand, then the r
 	}
 
 
-You'll notice this was almost the same as creating the Containers, with one major change: the ``file`` field. This should point to the data file of the Asset, in our case ``data.csv``. From the experiment results, copy the ``recipe_a-batch_1.csv`` file into the Asset folder, and rename it to ``data.csv``. Great! we just made our first Asset. Doing this by hand, though, can be tedious, so let's see hwo to automate it.
+You'll notice this was almost the same as creating the Containers, with one major change: the ``file`` field. This should point to the data file of the Asset, in our case ``data.csv``. From the experiment results, copy the ``recipe_a-batch_1.csv`` file into the Asset folder, and rename it to ``data.csv``. Great! we just made our first Asset. Doing this by hand, though, can be tedious, so let's see how to automate it.
 
 From the project root (``data`` folder) run
 
@@ -226,7 +241,7 @@ This will add three new Assets to your project. You can examine one of these new
 		|				|__ data.csv
 		|__ analysis
 
-.. only :: builder_html
+.. only:: builder_html or readthedocs
 
 	:download:`Click Here to download this project step. </_static/examples/fireworks/project_steps/01-assets/project/project.zip>`
 
@@ -312,7 +327,7 @@ You'll notice that we replaced the ``--search`` flag from the previous command l
 
 Now let's analyze the entrie project by running ``python -m thot.runner`` again. This will create a new Noise Statistics Asset for each of the batches.
 
-.. only :: builder_html
+.. only:: builder_html or readthedocs
 
 	:download:`Click Here to download this project step. </_static/examples/fireworks/project_steps/02-analysis/project/project.zip>`
 
@@ -330,7 +345,7 @@ Let's look at some of the new things we did here:
 
 + **line 9:** Get the Container the script is running in. In this case it will be Recipe A and Recipe B.
 
-+ **line 12:** When analyzing the batches we only had one Asset we wanted to use, so used teh ``find_asset()`` method. Now we want to pull in both ``noise_stats`` Assets, so use the ``find_assets()`` method, which returns a list of Assets that match the criteria. Also notice that the ``noise_stats`` aren't in teh Recipe Containers directly, but are in the batch children Containers. This highlights a very important point: **Containers have access to their Assets as well as all their childrens' Assets.**
++ **line 12:** When analyzing the batches we only had one Asset we wanted to use, so used the ``find_asset()`` method. Now we want to pull in both ``noise_stats`` Assets, so use the ``find_assets()`` method, which returns a list of Assets that match the criteria. Also notice that the ``noise_stats`` aren't in the Recipe Containers directly, but are in the batch children Containers. This highlights a very important point: **Containers have access to their Assets as well as all their childrens' Assets.**
 
 + **line 16-23:** Iterate over each ``noise_stats`` Asset, creating a Pandas DataFrame from it, and adding it to the data list to be combined in line 27.
 
@@ -363,9 +378,7 @@ Add the proper Script Association (``_scripts.json``) to the root folder, and an
 
 Congratulations! You just built your first Thot project, building it from scratch and analyzing the data to come to a final conclusion. We've only touched on the functionality of Thot, and with such a small project it's hard to get a sense of the power thot gives you in analyzing larger projects. To learn more about this you can go through the advanced tutorial (coming soon) and learn even more.
 
-
-
-.. only :: builder_html
+.. only:: builder_html or readthedocs
 
 	:download:`Click Here to download the final project. </_static/examples/fireworks/project_steps/03-moving_up/project/project.zip>`
 
@@ -373,7 +386,7 @@ Congratulations! You just built your first Thot project, building it from scratc
 Summary
 *******
 
-In this tutorial you learned how to build a local Thot project by creating a folder structure and adding ``_container.json`` files to create Containers. We then added data to our project by creating Assets using ``_asset.json`` files which pointed to the data file it described. We then learned how to write an analysis script using Thot to pull in the data we want. Finally, we created ``_scripts.json`` files to create Script Associations between Containers and the scripts to run on them.
+In this tutorial you learned how to build a local Thot project by creating a folder structure and adding ``_container.json`` files to create Containers. We then added data to our project by creating Assets using ``_asset.json`` files which point to their data file. Then we learned how to write an analysis script. We used Thot to pull in the data we wanted and used properties of the Asset. Finally, we created ``_scripts.json`` files to create Script Associations between Containers and the scripts to run on them.
 
 Cheat Sheets
 ============
@@ -404,7 +417,7 @@ Containers
 		}
 	}
 
-+ Add children Containers to the matched search Containers
++ Add children Containers to the matched search Containers.
 
 .. code-block:: bash
 	:caption: Adding children Containers.
@@ -472,7 +485,7 @@ Script Associations
 Analysis
 --------
 
-+ To initialize a local Thot project in your script
++ To initialize a local Thot project in your script.
 
 .. code-block:: python
 	:caption: Initialize a local Thot project.
@@ -480,7 +493,7 @@ Analysis
 	from thot.thot import LocalProject
 	thot = LocalProject()
 
-+ Finding Containers and Assets
++ Finding Containers and Assets.
 
 .. code-block:: python
 	:caption: Finding Containers and Assets.

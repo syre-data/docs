@@ -4,6 +4,33 @@ Local Project: Advanced
 
 
 
+:download:`Click Here to download the original two recipes. </_static/examples/fireworks/project_steps/03-moving_up/project/project.zip>`
+
+***********
+Adding Data
+***********
+
+:download: Results from Recipe C </_static/examples/fireworks/project_steps/04-adding_data/data.zip>
+
+
+Taking Notes
+============
+
+
+
+
+***************
+Testing Scripts
+***************
+
+
+
+Using Jupyter Notebooks
+=======================
+
+
+
+
 
 Reference Samples
 =================

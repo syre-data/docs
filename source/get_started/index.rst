@@ -2,7 +2,7 @@
 Get Started
 ###########
 
-These tutorials will get you start using Thot. These tutorials teach you how to use Thot to manage and analyze your data, as well as the concepts Thot is built on.
+These tutorials will get you started using Thot to manage and analyze your data. they use hands on examples to show you how to do things as well as the concepts Thot is built on.
 
 .. toctree::
    :maxdepth: 2
@@ -11,6 +11,7 @@ These tutorials will get you start using Thot. These tutorials teach you how to 
    local_project-basic
    local_project-advanced
    hosted_project-basic
+   utilities
 
 
 Indices and tables
