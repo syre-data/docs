@@ -132,7 +132,7 @@ Now that we have the hang of making Containers by hand, let's speed up the proce
 
 
 .. note::
-	Windows does not interpret single quotes (') in the command line, so only double quotes can be used ("). Thus, to enclose strings double quotes must be used, and any double uotes inside the strings must be escaped with a backslash (\).
+	Windows does not interpret single quotes (') in the command line, so only double quotes can be used ("). Thus, to enclose strings double quotes must be used, and any double quotes inside the strings must be escaped with a backslash (\\).
 
 	To convert from the Mac and Linux syntax to the Windows syntax, first escape all double quotes with a backslash ( ``"`` |rarr| ``\"``), then convert all single quotes into double quotes (``'`` |rarr| ``"``).
 
@@ -152,7 +152,7 @@ This should have added a new folder to your project called ``recipe-b`` with the
 
 If you inspect one of the new ``_container.json`` files you'll notice many more properties than the ones we've explored so far. 
 
-Great! We've now finished out 
+Great! Our project's structure is now complete, and we can start adding data to it. The final folder structure should be as below.
 ::
 
 	silent_fireworks
