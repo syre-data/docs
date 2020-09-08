@@ -485,7 +485,7 @@ Script Associations
 Analysis
 --------
 
-+ To initialize a local Thot project in your script.
++ To initialize a local Thot project in your Python script.
 
 .. code-block:: python
 	:caption: Initialize a local Thot project.
@@ -512,7 +512,7 @@ Analysis
 	file_path = asset.file
 	container_name = container.name
 
-	is_boolean    = container.metadata[ 'booean_metadata' ]
+	is_boolean    = container.metadata[ 'boolean_metadata' ]
 	nested_number = container.metadata[ 'json_metadata' ][ 'another_number' ]
 
 + Analyze the project.
