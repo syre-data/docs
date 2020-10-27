@@ -44,7 +44,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'recommonmark',
     'sphinx_fontawesome',
-    'sphinx-bootstrap'
+    'bric-sphinx-bootstrap'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

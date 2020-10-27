@@ -1,2 +1,2 @@
 sphinx_fontawesome
-bric_sphinx_bootstrap
+bric-sphinx-bootstrap
