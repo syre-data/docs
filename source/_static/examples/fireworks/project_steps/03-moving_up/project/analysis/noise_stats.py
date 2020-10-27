@@ -9,7 +9,7 @@ thot = LocalProject()
 noise_data = thot.find_asset( { 'type': 'noise-data' } )
 
 # import noise data into a pandas data frame
-df = pd.read_csv( noise_data.file, header = 0, index_col = 0, names = ( 'trial', 'volume' ) )
+df = pd.read_csv( noise_data.file, header = 0, index_col = 0, names = [ 'trial', 'volume' ] )
 
 # compute statistics
 stats = df.describe()

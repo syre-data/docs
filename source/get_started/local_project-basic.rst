@@ -1,5 +1,7 @@
 .. include:: <isonum.txt>
 
+.. _local_project_basics:
+
 ####################
 Local Project: Basic
 ####################
@@ -19,6 +21,8 @@ Thot requires Python (v3) which you can get from the `official Python site <http
 .. note::
 	We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
 
+.. seealso::
+	Thot offers hosted solutions which include additional functionality. Visit the :ref:`Hosted Project: Basics <hosted_project_basics>` tutorial for more info.
 
 ***********************
 Organizing Your Project
@@ -26,7 +30,7 @@ Organizing Your Project
 
 The first thing we need to do is organize our project. Thot uses a tree structure to organize your projects, giving your project different levels. The top level should be the most important grouping to you, becoming less important as you move down the tree. 
 
-For this project the most important thing we need to test is which recipe is quieter, so out top level grouping will be the recipes. Unfortunately, testing underwater fireworks happens to be quite expensive, so we will only be able to make two batches for each recipe. The batches will be our second level. This gives us the tree in :numref:`Fig. %s <local_project_organization>`
+For this project the most important thing we need to test is which recipe is quieter, so our top level grouping will be the recipes. Unfortunately, testing underwater fireworks happens to be quite expensive, so we will only be able to make two batches for each recipe. The batches will be our second level. This gives us the tree in :numref:`Fig. %s <local_project_organization>`.
 
 .. _local_project_organization:
 

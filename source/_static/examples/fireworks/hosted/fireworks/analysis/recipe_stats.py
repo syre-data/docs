@@ -1,9 +1,9 @@
 # include packages
 import pandas as pd
-from thot.thot import LocalProject
+from thot.thot import ThotProject
 
 # initialize thot
-thot = LocalProject()
+thot = ThotProject()
 
 # get recipe container
 recipe = thot.find_container( { '_id': thot.root } )
@@ -17,7 +17,7 @@ for stat in noise_stats:
 	# read data for each batch
 	tdf = pd.read_csv( 
 		stat.file, 
-		names = [ stat.metadata[ 'batch' ] ], 
+		names = ( stat.metadata[ 'batch' ], ), 
 		index_col = 0, 
 		header = 0 
 	)

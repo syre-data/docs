@@ -1,15 +1,15 @@
 # import packages
 import pandas as pd
-from thot.thot import LocalProject
+from thot.thot import ThotProject
 
 # initialize thot project
-thot = LocalProject()
+thot = ThotProject()
 
 # get noise data from asset
 noise_data = thot.find_asset( { 'type': 'noise-data' } )
 
 # import noise data into a pandas data frame
-df = pd.read_csv( noise_data.file, header = 0, index_col = 0, names = [ 'trial', 'volume' ] )
+df = pd.read_csv( noise_data.file, header = 0, index_col = 0, names = ( 'trial', 'volume' ) )
 
 # compute statistics
 stats = df.describe()

@@ -24,9 +24,9 @@ copyright = '2020, Brian Carlsen'
 author = 'Brian Carlsen'
 
 # The short X.Y version
-version = ''
+version = '0.2'
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = '0.2.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,6 +43,8 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.mathjax',
     'recommonmark',
+    'sphinx_fontawesome',
+    'sphinx-bootstrap'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -91,6 +93,12 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = [
+	'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
+	'styles.css'
+]
+
+html_js_files = []
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
