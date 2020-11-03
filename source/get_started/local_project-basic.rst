@@ -66,7 +66,7 @@ Move into the ``data`` folder. Here we will add a file called ``_container.json`
 .. note::
 	JSON is a very strict format. Make sure everything is double quoted and there are no stray commas.
 
-Great! the ``data`` folder is now considered the ``root`` of our project because it is the highest Container. Now let's add the Container for Recipe A. Make a folder called ``recipe-a`` and add a ``_container.json`` file to it.
+Great! The ``data`` folder is now considered the ``root`` of our project because it is the highest Container. Now let's add the Container for Recipe A. Make a folder called ``recipe-a`` and add a ``_container.json`` file to it.
 
 .. code-block:: JSON
 	:caption: recipe-a/_container.json
@@ -142,7 +142,7 @@ Now that we have the hang of making Containers by hand, let's speed up the proce
 
 	Throughout this tutorial the Mac and Linux command line syntax will be used, with some examples of the change for Windows. However, it is assumed after the first few examples, you can make the necessary adjustments to the examples yourself.
 
-Let's see what this is doing. :code:`python -m thot.utilities` will run the Utilities for us. Next we pass in the tool we want to use :code:`add_containers`. We then tell the tool which Container we want to add the new Containers to :code:`--search '{ "type": "project" }'`. Finally, we describe the Container we want to add :code:`--containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "a" } } }'`.
+Let's see what this is doing. :code:`python -m thot.utilities` will run the Utilities for us. Next we pass in the tool we want to use :code:`add_containers`. We then tell the tool which Container we want to add the new Containers to :code:`--search '{ "type": "project" }'`. Finally, we describe the Container we want to add :code:`--containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "b" } } }'`.
 
 This should have added a new folder to your project called ``recipe-b`` with the ``_container.json`` file already filled out. That didn't save us that much time, though. The real power comes when we need to add multiple Containers across our project. Let's try the same thing with the batches. 
 
@@ -177,7 +177,7 @@ Great! Our project's structure is now complete, and we can start adding data to 
 
 .. only:: builder_html or readthedocs
 
-	:download:`Click Here to download this project step. </_static/examples/fireworks/project_steps/00-tree/project/project.zip>`
+	:download:`Click here to download this project step. </_static/examples/fireworks/project_steps/00-tree/project/project.zip>`
 
 ***************************
 Adding Data to Your Project
@@ -186,7 +186,7 @@ Now that we have our tree, we can add data. Most often data is added to the lowe
 
 .. only:: builder_html or readthedocs
 
-	:download:`Click Here to download the results. </_static/examples/fireworks/project_steps/01-assets/experiment_data/data.zip>`
+	:download:`Click here to download the results. </_static/examples/fireworks/project_steps/01-assets/experiment_data/data.zip>`
 
 In Thot, any data files that we want to analyze -- CSV, text, images, binary, anything -- is called an Asset. Similar to Containers, an Asset is a folder with an ``_asset.json`` file in it. Let's create these Assets using Thot's Utilities. 
 
@@ -247,7 +247,7 @@ This will add three new Assets to your project. You can examine one of these new
 
 .. only:: builder_html or readthedocs
 
-	:download:`Click Here to download this project step. </_static/examples/fireworks/project_steps/01-assets/project/project.zip>`
+	:download:`Click here to download this project step. </_static/examples/fireworks/project_steps/01-assets/project/project.zip>`
 
 ******************
 Analyzing the Data
@@ -333,7 +333,7 @@ Now let's analyze the entrie project by running ``python -m thot.runner`` again.
 
 .. only:: builder_html or readthedocs
 
-	:download:`Click Here to download this project step. </_static/examples/fireworks/project_steps/02-analysis/project/project.zip>`
+	:download:`Click here to download this project step. </_static/examples/fireworks/project_steps/02-analysis/project/project.zip>`
 
 Moving On Up
 ============
@@ -384,7 +384,7 @@ Congratulations! You just built your first Thot project, building it from scratc
 
 .. only:: builder_html or readthedocs
 
-	:download:`Click Here to download the final project. </_static/examples/fireworks/project_steps/03-moving_up/project/project.zip>`
+	:download:`Click here to download the final project. </_static/examples/fireworks/project_steps/03-moving_up/project/project.zip>`
 
 *******
 Summary
