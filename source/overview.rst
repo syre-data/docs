@@ -2,7 +2,7 @@
 Overview
 ########
 
-Thot is a software program used to manage and analyze data. The core software is available as a Python package at PyPI (`pypi.org/project/thot-data <https://pypi.org/project/thot-data/>`__) with open source code on GitHub (`github.com/bicarlsen/thot-data <https://github.com/bicarlsen/thot-data/>`__) and documentation hosted on Read The Docs (`thot-data-docs.readthedocs.io <https://thot-data-docs.readthedocs.io/en/latest/>`__). There is also a hosted service (`thot-data.com <http://thot-data.com/>`__) available that acts as a user interface for the core program. The hosted service uses the Software as a Service (SaaS) architecture to ease the use of the core service and provide additional functionality.
+Thot is a software program used to manage and analyze data. The core software is available as a Python package at PyPI (`pypi.org/project/thot-data <https://pypi.org/project/thot-data/>`_) with open source code on GitHub (`github.com/bicarlsen/thot-data <https://github.com/bicarlsen/thot-data/>`_) and documentation hosted on Read The Docs (`thot-data-docs.readthedocs.io <https://thot-data-docs.readthedocs.io/en/latest/>`__). There is also a hosted service (`thot-data.com <http://thot-data.com/>`_) available that acts as a user interface for the core program. The hosted service uses the Software as a Service (SaaS) architecture to ease the use of the core service and provide additional functionality.
 
 Thot’s core principle is
 
@@ -19,14 +19,14 @@ To achieve this core principle Thot uses **top-down organization** and **bottom-
 
 .. _fig_organization_analysis_model:
 
-.. figure:: /_static/organization-analysis-model.png
+.. figure:: /_static/overview/organization-analysis-model.png
 	:align: center
 	:width: 65%
 	:alt: Top-down organization, bottom-up analysis.
 	:figclass: align-center
 	:class: no-scaled-link
 
-.. figure:: /_static/organization-analysis-model-nested.png
+.. figure:: /_static/overview/organization-analysis-model-nested.png
 	:align: center
 	:width: 65%
 	:alt: Outside-in organization, inside-out analysis.
@@ -42,7 +42,7 @@ Containers
 
 Containers are the organizational building blocks of your project. They allow you to structure your projects and analysis in a logical way. Following the top-down organizational approach, Containers can contain both other Containers as children, and Assets. They can also have descriptors and metadata attached to them. Child containers inherit all the properties of their parents. Containers are also associated with Scripts, which analyze its Assets and produce new Assets.
 
-.. figure:: /_static/container-model.png
+.. figure:: /_static/overview/container-model.png
 	:align: center
 	:width: 45%
 	:alt: Container model.
@@ -61,7 +61,7 @@ Scripts
 
 A Script is a multi-input, multi-output function whose inputs and outputs are Assets. The input to a script is *consumed* and the output is *produced*. Produced Assets can then be consumed by other Scripts in the future.
 
-.. figure:: /_static/script-model.png
+.. figure:: /_static/overview/script-model.png
 	:align: center
 	:width: 55%
 	:alt: Script model.
@@ -126,7 +126,7 @@ Below is an example of a Thot Project's lifecycle to show how these ideas are re
 	1) Organize using Containers
 	^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	.. image:: /_static/process-01-organize.png
+	.. image:: /_static/overview/process-01-organize.png
 		:width: 45%
 		:class: no-scaled-link float-left mr-5
 
@@ -138,7 +138,7 @@ Below is an example of a Thot Project's lifecycle to show how these ideas are re
 	2) Add data using Assets
 	^^^^^^^^^^^^^^^^^^^^^^^^
 
-	.. image:: /_static/process-02-data.png
+	.. image:: /_static/overview/process-02-data.png
 		:width: 45%
 		:class: no-scaled-link float-left mr-5
 
@@ -149,7 +149,7 @@ Below is an example of a Thot Project's lifecycle to show how these ideas are re
 	3) Associate Scripts for analysis
 	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	.. image:: /_static/process-03-associate.png
+	.. image:: /_static/overview/process-03-associate.png
 		:width: 45%
 		:class: no-scaled-link float-left mr-5
 
@@ -162,15 +162,15 @@ Below is an example of a Thot Project's lifecycle to show how these ideas are re
 
 	.. container:: float-left col-6 mr-4
 
-		.. image:: /_static/process-04a-analyze.png
+		.. image:: /_static/overview/process-04a-analyze.png
 			:class: no-scaled-link mb-5
 
-		.. image:: /_static/process-04b-analyze.png
+		.. image:: /_static/overview/process-04b-analyze.png
 			:class: no-scaled-link mb-5
 
-		.. image:: /_static/process-04c-analyze.png
+		.. image:: /_static/overview/process-04c-analyze.png
 			:class: no-scaled-link
 
-	Starting from the bottom level of the Container tree, Thot automatically runs the analysis. After all the Scripts at one level are complete, Thot runs the Scripts on the level above, until the top is reached. This allows Scripts at higher level to consume those produced at the lower levels. 
+	Starting from the bottom level of the Container tree, Thot automatically runs the analysis. After all the Scripts at one level are complete Thot runs the Scripts on the level above. This process is repeated, moving up the tree until the top is reached. This allows Scripts at higher levels to consume those produced at the lower levels. 
 
 By keeping your Scripts separate from your data, you can reuse them on new projects. You can also retroactively add data to your projects, and without any modifciations, include it in your analysis just by re-analyzing the project.
