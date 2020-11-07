@@ -45,7 +45,7 @@ For this project the most important thing we need to test is which recipe is qui
 Setting Up Your Project Tree
 ****************************
 
-Local projects use your file system as a database. We will begin by making a folder for the project. Let's call it ``fireworks``. One of the main philosphies behind Thot is that data and analysis should be separate. Let's reflect this in our project by creating a ``data`` folder and a ``analysis`` folder.
+Local projects use your file system as a database. We will begin by making a folder for the project. Let's call it ``fireworks``. One of the main philosophies behind Thot is that data and analysis should be separate. Let's reflect this in our project by creating a ``data`` folder and an ``analysis`` folder.
 
 We will build our project tree in two ways. First, we'll create the tree for Recipe A by hand, to get a sense of how Thot uses our folders as a database. And second, we will use Thot's Utilities package to build the tree for Recipe B, automating the process.
 
@@ -270,7 +270,7 @@ Let's go through and break down what each chunk of code is doing.
 .. 	* - Line No.
 .. 	  - Description
 .. 	* - 2-3
-.. 	  - Import the packages we're goin to use, namely Pandas and Thot. In this case we only need to use a small part: LocalProject.
+.. 	  - Import the packages we're going to use, namely Pandas and Thot. In this case we only need to use a small part: LocalProject.
 .. 	* - 6
 .. 	  - Initialize the Thot project, giving us access to all the data stored within it.
 .. 	* - 9
@@ -280,7 +280,7 @@ Let's go through and break down what each chunk of code is doing.
 .. 	* - 15
 .. 	  - Compute statistics on the noise data.
 .. 	* - 18-24
-.. 	  - Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as it's second argument an ``_id`` for the new Asset.
+.. 	  - Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as its second argument an ``_id`` for the new Asset.
 .. 	* - 27
 .. 	  - Save the statistics to the new Asset.
 
@@ -329,7 +329,7 @@ You should see the ``noise_stats`` Asset be added to the folder. Great! Now let'
 
 You'll notice that we replaced the ``--search`` flag from the previous command like this with the ``-s`` flag. The two are synonyms for each other, ``-s`` just giving us a shorthand for ``--search``. 
 
-Now let's analyze the entrie project by running ``python -m thot.runner`` again. This will create a new Noise Statistics Asset for each of the batches.
+Now let's analyze the entire project by running ``python -m thot.runner`` again. This will create a new Noise Statistics Asset for each of the batches.
 
 .. only:: builder_html or readthedocs
 
@@ -376,9 +376,9 @@ Let's breakdown the new concepts:
 
 + **line 14:** Use the recipe metadata from the Asset to name the data.
 
-+ **line 28, 44:** We;ve already seen that we can pull in multiple Assets into our scripts. here we also see that we can create multiple Assets in a single script. Also notice that one Asset is a CSV text file, while the other is a PNG image file. Assets can be any sort of file.
++ **line 28, 44:** We've already seen that we can pull in multiple Assets into our scripts. Here we also see that we can create multiple Assets in a single script. Also notice that one Asset is a CSV text file, while the other is a PNG image file. Assets can be any sort of file.
 
-Add the proper Script Association (``_scripts.json``) to the root folder, and analyze the project. Take a look at the Assets we created so we know which recipe is quiter.
+Add the proper Script Association (``_scripts.json``) to the root folder, and analyze the project. Take a look at the Assets we created so we know which recipe is quieter.
 
 Congratulations! You just built your first Thot project, building it from scratch and analyzing the data to come to a final conclusion. We've only touched on the functionality of Thot, and with such a small project it's hard to get a sense of the power thot gives you in analyzing larger projects. To learn more about this you can go through the advanced tutorial (coming soon) and learn even more.
 
@@ -402,7 +402,7 @@ Here are the most important concepts and commands we learned through this tutori
 Containers
 ----------
 
-+ A Conatainer is a folder with a ``_container.json`` file in it. Containers can container other Containers, Assets, and Script Associations.
++ A Container is a folder with a ``_container.json`` file in it. Containers can contain other Containers, Assets, and Script Associations.
 
 .. code-block:: JSON
 	:caption: Basic ``_container.json`` file.

@@ -65,7 +65,7 @@ Edit Batch 1 setting its type to ``batch`` and adding a piece of metadata named 
 
 Click the :badge:`New Assets, badge-success` button, navigate to the project folder, and select the file ``a1-data.csv``. This creates an Asset for the data, and adds it to the Container. To access the Asset in our analysis script we'll find it by its type. To set this click on the down arrow :fa:`chevron-down` to open its editor. Double click on the (No type) text to open its type editor, and set it to `noise-data`. To save the changes you can either click on the :badge:`Save, badge-success` button, or press :kbd:`Shift + Enter`. To close the editor without saving press `Esc`. To minimize the Asset's editor click on the up arrow :fa:`chevron-up`.
 
-Save the changes to Batch 1, and we'll now move on to Batch 2. This timem let's add the data in another way. Instead of doing it from Batch 2's editor, will do it directly from the Container Tree. Find the data file ``a2-data.csv`` and drag and drop it on to the Batch 2 Container. This adds an Asset for the data and adds it to te Container.
+Save the changes to Batch 1, and we'll now move on to Batch 2. This time let's add the data in another way. Instead of doing it from Batch 2's editor, will do it directly from the Container Tree. Find the data file ``a2-data.csv`` and drag and drop it on to the Batch 2 Container. This adds an Asset for the data and adds it to the Container.
 
 Open Batch 2's editor, set its type and add a piece of metadata similar to how we did for Batch 1. Be sure to change the metadata value to ``2`` though. We'll also set the type of the Asset exactly as we did for Batch 1.
 
@@ -81,7 +81,7 @@ Return to the Container Tree view by clicking on its icon :fa:`sitemap` in the t
 
 Edit Recipe B > Batch 1 as before, setting its type to ``batch``, and adding a ``batch`` number metadata with value ``1``. Let's add our data Asset. Because it's already been added to the project all we have to do is associate it to the Container. Click on the :badge:`Add Asset, badge-success` button, and select it from the drop down list, then click the :badge:`Add Asset, badge-success` button again to add it. Save your changes as usual.
 
-Finally let's edit Recipe B > Batch 2. Again setting it's type to ``batch``, adding a ``batch`` number metadata with value ``2``, and adding it's Asset. We also wan tot make a note here. Notes allow us to makes remarks directly on our data or analysis. On the day we fabricated this batch the humidity was a bit higher than usual, which we think may have affected the explosive powders. Click the :badge:`Add Note, badge-success` button to add a note. Title it ``Fabrication Humidity`` and make the note
+Finally let's edit Recipe B > Batch 2. Again setting its type to ``batch``, adding a ``batch`` number metadata with value ``2``, and adding its Asset. We also want to make a note here. Notes allow us to makes remarks directly on our data or analysis. On the day we fabricated this batch the humidity was a bit higher than usual, which we think may have affected the explosive powders. Click the :badge:`Add Note, badge-success` button to add a note. Title it ``Fabrication Humidity`` and make the note
 
 	We noticed an elevated humidity during fabrication of this batch. While all the powders seem normal, it may have an influence on their performance.
 
@@ -121,15 +121,15 @@ Now that our project is all set up, let's finally analyze it. We can choose to a
 Select its Container by single clicking on it. This activates some of the tools that were disabled before. Click on the Analyze button :fa:`chart-line`
 . When the Analysis is done you'll see the new Asset show up in the preview panel on the right hand side of the screen.
 
-Now let's analyze the whole Recipe A subtree. Open the Recipe A Container editor, and clcik on the :badge:`Analyze, badge-primary` button. Once the analysis is complete we will see the new Assets show up in the Assets section.
+Now let's analyze the whole Recipe A subtree. Open the Recipe A Container editor, and click on the :badge:`Analyze, badge-primary` button. Once the analysis is complete we will see the new Assets show up in the Assets section.
 
-Let open the Container editor for Recipe A. Here we see that we can download the entire container, which will also download all of its children. We can also download individual Assets. 
+Let's open the Container editor for Recipe A. Here we see that we can download the entire container, which will also download all of its children. We can also download individual Assets. 
 
 Click on the Batch 1 child to navigate to it. Here you'll see that we now have two versions of the Noise Statistics Asset that our script created. This is because the Noise Stats analysis ran twice on it: once when we analyzed Batch 1 itself, and again when we analyzed Recipe A. This is one of the key concepts in Thot -- analysis runs from the bottom of the tree upwards, allowing each higher level access to all the Assets below it.
 
 Let's remove all the Assets we've created so far, then analyze the entrie project. Click on the trash can icon :fa:`trash` in the corner of the Asset preview card to remove it. You can navigate to Recipe A by scrolling to the top of the Container editor and clicking it in the breadcrumbs navigation, or by exiting the navigator and re-opening it for Recipe A. Let's also remove the Noise Stats Asset for Batch B.
 
-Finally, let's analys the entire project. Select the Silent Fireworks Container, and analyze it. Let's download the entire project so we can browse all of our Assets. With the Silent Fireworks Container still selected, click the download icon :fa:`download`. Extract the zip file, and browse through the folders. When you download a Container it downloads it as a Local Thot project, which you can learn more about in the :ref:`Local Project: Basics <local_project_basics>` tutorial. 
+Finally, let's analyze the entire project. Select the Silent Fireworks Container, and analyze it. Let's download the entire project so we can browse all of our Assets. With the Silent Fireworks Container still selected, click the download icon :fa:`download`. Extract the zip file, and browse through the folders. When you download a Container it downloads it as a Local Thot project, which you can learn more about in the :ref:`Local Project: Basics <local_project_basics>` tutorial. 
 
 Take a look at the Recipe Comparison bar chart. Which recipe should we go with?
 
@@ -137,6 +137,6 @@ Take a look at the Recipe Comparison bar chart. Which recipe should we go with?
 Summary
 *******
 
-In this tutorial we learned the basics of creating and analyzing a Thot project. We began by creating a new project. We created our Container Tree, organizing our project. We added properties, notes, Assets, and Scripts to our Containers. We were able to add Assets both within the Container, and from the Project Assets view. To add Scripts we first added them in the Project Scripts view, then associated them to our desired Containers. Finally, we declared our project's dependencies in the Library view.
+In this tutorial we learned the basics of creating and analyzing a Thot project. We began by creating a new project. We created our Container Tree, organizing our project. We added properties, notes, Assets, and Scripts to our Containers. We were able to add Assets both within the Container, and from the Project Assets view. To add Scripts we first added them in the Project Scripts view, then associated them with our desired Containers. Finally, we declared our project's dependencies in the Library view.
 
 Once we saved our project we were taken to the Project view. From here we saw how we could modify our Containers, download Containers and Assets, and analyze our project.
