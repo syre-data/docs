@@ -136,7 +136,7 @@ Utilities functions include some generic options that can be applied to all func
 + ``--search``, ``-s``: JSON object used to match Containers to apply the function to.
 
 .. warning::
-	Ensure that your JSON is properly quoted. You will likely have to place single quotes around the JSON string, and double quaotes around property keys and strings within the object. E.g. ``'{ "string_property": "test string", "boolean_property": true, "number_property": 42 }'``
+	Ensure that your JSON is properly quoted. You will likely have to place single quotes around the JSON string, and double quotes around property keys and strings within the object. E.g. ``'{ "string_property": "test string", "boolean_property": true, "number_property": 42 }'``
 
 .. warning::
 	On Windows machines you can not have spaces within quoted text. This results in an ``unrecognized arguments`` error. Thus, the command should read ``'{"string_property":"test string","boolean_property":true,"number_property":42}'``
