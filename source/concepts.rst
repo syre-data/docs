@@ -18,7 +18,7 @@ Local Projects
 
 Local and Hosted projects really only differ in how they store your data. Local projects use your file directory as a database, while the Hosted version uses the Thot server. 
 
-Local projects are just a set of folders and files on you computer. To tell Thot what a folder or file is you use an **Object File**. Object Files are just :ref:`JSON<json>` files that provide information to your project. There are three types of Object Files -- one for each component of a Thot projects.
+Local projects are just a set of folders and files on you computer. To tell Thot what a folder or file is you use an **Object File**. Object Files are just :ref:`JSON<json>` files that provide information to your project. There are three types of Object Files -- one for each component of a Thot project.
 
 .. warning::
 	A folder can be either a Container or an Asset, not both.
@@ -269,7 +269,7 @@ A simple python script for a Local Project may look something like
 Testing Scripts
 ---------------
 
-You can test your scripts using the ``LocalHost.dev_mode()`` function along with passing in a test container to act as the temporary root of your project.
+You can test your scripts using the ``LocalProject.dev_mode()`` function along with passing in a test container to act as the temporary root of your project.
 
 .. code-block:: python
 
@@ -281,7 +281,7 @@ You can test your scripts using the ``LocalHost.dev_mode()`` function along with
 
 	thot = LocalProject( root_path )
 
-This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. The ``LocalProject.dev_mode()`` method returns ``True`` if the script is being run by the :ref:`runner`, and ``False`` if it's being run manually, i.e. from the console or within a Jupyter Notebook. 
+This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. The ``LocalProject.dev_mode()`` method returns ``False`` if the script is being run by the :ref:`runner`, and ``True`` if it's being run manually, i.e. from the console or within a Jupyter Notebook. 
 
 .. _runner:
 

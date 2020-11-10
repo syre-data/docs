@@ -52,7 +52,7 @@ Let's save the changes we made by clicking the :badge:`Save, badge-primary` butt
 Adding Levels
 =============
 
-We'll start by creating the Recipe A subtree. First click on the plus sign :fa:`plus-circle` to add a child Container to the project, and name it ``Recipe A``. Open the editor just as before by clicking on the pen icon. This time we'll set a few additional properties. First, set its type to ``recipe``. Next well add some metadata to the Container that we can use during the analysis. 
+We'll start by creating the Recipe A subtree. First click on the plus sign :fa:`plus-circle` to add a child Container to the project, and name it ``Recipe A``. Open the editor just as before by clicking on the pen icon. This time we'll set a few additional properties. First, set its type to ``recipe``. Next we'll add some metadata to the Container that we can use during the analysis. 
 
 Click on the :badge:`Add Metadata, badge-success` button. Our metadata will be named ``recipe``, have a type of ``String``, and a value of ``A``. Save the Container just as before.
 
@@ -75,7 +75,7 @@ Project Assets
 
 As you've started to see, Thot's interface is designed to allow you to do the same thing in many ways. This allows you to work in the way that is most convenient to you. Let's see another way to add Assets to our project.
 
-Switch to the Project Assets view by clicking on the Assets icon :fa:`file-image` in the tools panel. Here you can see a list of all the Assets in our project. We can also add Assets to the project, and associate them with Containers later. We'll add the Assets for Recipe B to the project now. Drag and drop the data files ``b1-data.csv`` and ``b2-data.csv`` to the designated area to add them. Just as we did before, set their type to ``noise-data``. Let's also change the names of the data to be a bit more descriptive. To do this double click on their name, opening up the editor. Let's names them ``A1 Data``, ``A2 Data``, ``B1 Data``, and ``B2 Data``.
+Switch to the Project Assets view by clicking on the Assets icon :fa:`file-image` in the tools panel. Here you can see a list of all the Assets in our project. We can also add Assets to the project, and associate them with Containers later. We'll add the Assets for Recipe B to the project now. Drag and drop the data files ``b1-data.csv`` and ``b2-data.csv`` to the designated area to add them. Just as we did before, set their type to ``noise-data``. Let's also change the names of the data to be a bit more descriptive. To do this double click on their name, opening up the editor. Let's name them ``A1 Data``, ``A2 Data``, ``B1 Data``, and ``B2 Data``.
 
 Return to the Container Tree view by clicking on its icon :fa:`sitemap` in the tools panels. Add Recipe B to the project, and Batches 1 and 2 to the recipe. Set Recipe B's type to ``recipe`` and add a string metadata with value ``B`` to it, just as we did for Recipe A.
 
@@ -96,9 +96,9 @@ We'll now add the analysis Scripts to our project. Go to the Project Scripts vie
 + recipe-stats.py -> Recipe Stats
 + recipe-comparison.py -> Recipe Comparison
 
-Let now associate these Scripts with their respective Containers. We'll start with Recipe A > Batch 1. click on the pen to edit, and click on the :badge:`Add Script, badge-success` button. Select the ``Noise Stats`` Script and save the container. Do the same for the other batches. We'll then repeat the process for both recipes adding the ``Recipe Stats`` Script to them, and finally we'll add the ``Recipe Comparison`` Script to the root container at the top.
+Let's now associate these Scripts with their respective Containers. We'll start with Recipe A > Batch 1. click on the pen to edit, and click on the :badge:`Add Script, badge-success` button. Select the ``Noise Stats`` Script and save the container. Do the same for the other batches. We'll then repeat the process for both recipes adding the ``Recipe Stats`` Script to them, and finally we'll add the ``Recipe Comparison`` Script to the root container at the top.
 
-Finally we need to add a library dependency to our project. Our Scripts use the `Pandas  <https://pandas.pydata.org/>`_ library, so we need to tell our project about this dependency. Open the Library view by clicking on the book icon :fa:`book`. Pandas is considered a remote library because we haven't uploaded it directly to our Thot account. To add is as a dependency in our project type ``pandas`` into the Name field and select ``Python`` as the language. You can leave the version blank, as we'll use the most recent version. Click the :badge:`Add Library, badge-success` button to add it to our project.
+Finally we need to add a library dependency to our project. Our Scripts use the `Pandas  <https://pandas.pydata.org/>`_ library, so we need to tell our project about this dependency. Open the Library view by clicking on the book icon :fa:`book`. Pandas is considered a remote library because we haven't uploaded it directly to our Thot account. To add it as a dependency in our project type ``pandas`` into the Name field and select ``Python`` as the language. You can leave the version blank, as we'll use the most recent version. Click the :badge:`Add Library, badge-success` button to add it to our project.
 
 Great! That finished our project set up. We can ensure we have everything set up the way we want by going to the Container Tree view and changing the **Preview** of our Containers. Go through each of the options to verify the Containers have the desired properties and associations.
 
@@ -127,7 +127,7 @@ Let's open the Container editor for Recipe A. Here we see that we can download t
 
 Click on the Batch 1 child to navigate to it. Here you'll see that we now have two versions of the Noise Statistics Asset that our script created. This is because the Noise Stats analysis ran twice on it: once when we analyzed Batch 1 itself, and again when we analyzed Recipe A. This is one of the key concepts in Thot -- analysis runs from the bottom of the tree upwards, allowing each higher level access to all the Assets below it.
 
-Let's remove all the Assets we've created so far, then analyze the entrie project. Click on the trash can icon :fa:`trash` in the corner of the Asset preview card to remove it. You can navigate to Recipe A by scrolling to the top of the Container editor and clicking it in the breadcrumbs navigation, or by exiting the navigator and re-opening it for Recipe A. Let's also remove the Noise Stats Asset for Batch B.
+Let's remove all the Assets we've created so far, then analyze the entire project. Click on the trash can icon :fa:`trash` in the corner of the Asset preview card to remove it. You can navigate to Recipe A by scrolling to the top of the Container editor and clicking it in the breadcrumbs navigation, or by exiting the navigator and re-opening it for Recipe A. Let's also remove the Noise Stats Asset for Batch B.
 
 Finally, let's analyze the entire project. Select the Silent Fireworks Container, and analyze it. Let's download the entire project so we can browse all of our Assets. With the Silent Fireworks Container still selected, click the download icon :fa:`download`. Extract the zip file, and browse through the folders. When you download a Container it downloads it as a Local Thot project, which you can learn more about in the :ref:`Local Project: Basics <local_project_basics>` tutorial. 
 
