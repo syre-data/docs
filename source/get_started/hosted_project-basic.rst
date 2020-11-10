@@ -52,7 +52,7 @@ Let's save the changes we made by clicking the :badge:`Save, badge-primary` butt
 Adding Levels
 =============
 
-We'll start by creating the Recipe A subtree. First click on the plus sign :fa:`plus-circle` to add a child Container to the project, and name it ``Recipe A``. Open the editor just as before by clicking on the pen icon. This time we'll set a few additional properties. First, set its type to ``recipe``. Next well add some metadata to the Container that we can use during the analysis. 
+We'll start by creating the Recipe A subtree. First click on the plus sign :fa:`plus-circle` to add a child Container to the project, and name it ``Recipe A``. Open the editor just as before by clicking on the pen icon. This time we'll set a few additional properties. First, set its type to ``recipe``. Next we'll add some metadata to the Container that we can use during the analysis. 
 
 Click on the :badge:`Add Metadata, badge-success` button. Our metadata will be named ``recipe``, have a type of ``String``, and a value of ``A``. Save the Container just as before.
 
