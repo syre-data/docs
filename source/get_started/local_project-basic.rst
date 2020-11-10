@@ -295,7 +295,7 @@ Let's go through and break down what each chunk of code is doing.
 
 + **line 15:** Compute statistics on the noise data.
 
-+ **lines 18-24:** Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as it's second argument an ``_id`` for the new Asset.
++ **lines 18-24:** Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as its second argument an ``_id`` for the new Asset.
 
 +  **line 27:** Saves the statistics to the new Asset.
 
