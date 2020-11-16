@@ -1,8 +1,8 @@
 import pandas as pd
-from thot.thot import LocalProject
+from thot import ThotProject
 
 # intialize thot
-thot = LocalProject()
+thot = ThotProject()
 
 # prepare data
 recipe_stats = thot.find_assets( { 'type': 'recipe-stats' } )

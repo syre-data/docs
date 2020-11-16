@@ -1,9 +1,9 @@
 # include packages
 import pandas as pd
-from thot.thot import LocalProject
+from thot import ThotProject
 
 # initialize thot
-thot = LocalProject()
+thot = ThotProject()
 
 # get recipe container
 recipe = thot.find_container( { '_id': thot.root } )

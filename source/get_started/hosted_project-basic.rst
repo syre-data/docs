@@ -54,16 +54,20 @@ Adding Levels
 
 We'll start by creating the Recipe A subtree. First click on the plus sign :fa:`plus-circle` to add a child Container to the project, and name it ``Recipe A``. Open the editor just as before by clicking on the pen icon. This time we'll set a few additional properties. First, set its type to ``recipe``. Next well add some metadata to the Container that we can use during the analysis. 
 
+.. admonition:: Metadata
+	
+	Metadata is data about data. During our course of research, we will often run the same type of experiment with different samples or experimental parameters. Metadata is how Thot incorporates this data about data into your projects.
+
 Click on the :badge:`Add Metadata, badge-success` button. Our metadata will be named ``recipe``, have a type of ``String``, and a value of ``A``. Save the Container just as before.
 
-Let's now add the batch Containers. This time we'll add both batch at once. To do this hold the :kbd:`Ctrl` key and click on the plus icon. This will reveal the Add Multiple Children dialogue box. In this case we want to add two children, one for each batch. Enter ``2`` into the input box and click the :badge:`Add, badge-primary` button.
+Let's now add the batch Containers. This time we'll add both batches at once. To do this hold the :kbd:`Ctrl` key and click on the plus icon. This will reveal the Add Multiple Children dialogue box. In this case we want to add two children, one for each batch. Enter ``2`` into the input box and click the :badge:`Add, badge-primary` button.
 
 Name the first Container ``Batch 1``, and the second ``Batch 2``. To quickly move to the next Container you can press the :kbd:`Tab` key and to move to the previous one hold :kbd:`Shift` then press :kbd:`Tab`.
 
 
-Edit Batch 1 setting its type to ``batch`` and adding a piece of metadata named ``batch`` of type ``Number`` and value ``1``. We'll also add our first piece of data to Batch 1.
+Edit Batch 1 by setting its type to ``batch`` and adding a piece of metadata named ``batch`` of type ``Number`` and value ``1``. We'll also add our first piece of actual data to Batch 1.
 
-Click the :badge:`New Assets, badge-success` button, navigate to the project folder, and select the file ``a1-data.csv``. This creates an Asset for the data, and adds it to the Container. To access the Asset in our analysis script we'll find it by its type. To set this click on the down arrow :fa:`chevron-down` to open its editor. Double click on the (No type) text to open its type editor, and set it to `noise-data`. To save the changes you can either click on the :badge:`Save, badge-success` button, or press :kbd:`Shift + Enter`. To close the editor without saving press `Esc`. To minimize the Asset's editor click on the up arrow :fa:`chevron-up`.
+Click the :badge:`New Assets, badge-success` button, navigate to the project folder, and select the file ``a1-data.csv``. This creates an Asset for the data, and adds it to the Container. To access the Asset in our analysis script we'll find it by its type. To set this click on the down arrow :fa:`chevron-down` to open its editor. Double click on the ``(No type)`` text to open its type editor, and set it to `noise-data`. To save the changes you can either click on the :badge:`Save, badge-success` button, or press :kbd:`Shift + Enter`. To close the editor without saving press `Esc`. To minimize the Asset's editor click on the up arrow :fa:`chevron-up`.
 
 Save the changes to Batch 1, and we'll now move on to Batch 2. This time let's add the data in another way. Instead of doing it from Batch 2's editor, will do it directly from the Container Tree. Find the data file ``a2-data.csv`` and drag and drop it on to the Batch 2 Container. This adds an Asset for the data and adds it to the Container.
 

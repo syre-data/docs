@@ -1,6 +1,6 @@
 # include packages
 import pandas as pd
-from thot.thot import ThotProject
+from thot import ThotProject
 
 # initialize thot
 thot = ThotProject()

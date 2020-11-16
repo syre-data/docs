@@ -187,14 +187,7 @@ To create a Hosted project go to `thot-data.com <http://www.thot-data.com>`_ and
 
 Hosted projects have additional features such as user friendly interfaces for project creation, sharing projects and scripts, and more.
 
-
 A Hosted Project uses the Thot servers as its database. Anytime a change is made to a project, the relevant analysis are automatically run, unless the scripts are set to run manually.
-
-There are only two changes you need to make to convert a local analysis script into a hosted analysis script:
-
-1. ``from thot.thot import LocalProject`` |rarr| ``from thot.thot import ThotProject``
-
-2. ``thot = LocalProject()`` |rarr| ``thot = ThotProject()`` 
 
 
 ***************
@@ -238,14 +231,14 @@ Local Project
 
 A Local Project is a Thot Interface that uses your local file system as its database. During the analysis everything is performed relative to the active Container.
 
-A simple python script for a Local Project may look something like
+A simple python script for a local project may look something like
 
 .. code-block:: python
 
 	import pandas as pd
-	from thot.thot import LocalProject
+	from thot import ThotProject
 
-	thot = LocalProject() # set up local project
+	thot = ThotProject() # set up local project
 
 	# retrieve data
 	sample = thot.find_container( { 'type': 'sample'  } )
@@ -275,13 +268,13 @@ You can test your scripts using the ``LocalHost.dev_mode()`` function along with
 
 	root_path = (
 	    'realtive/path/to/test/container'
-	    if LocalProject.dev_mode() else 
+	    if ThotProject.dev_mode() else 
 	    None
 	)
 
-	thot = LocalProject( root_path )
+	thot = ThotProject( root_path )
 
-This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. The ``LocalProject.dev_mode()`` method returns ``True`` if the script is being run by the :ref:`runner`, and ``False`` if it's being run manually, i.e. from the console or within a Jupyter Notebook. 
+This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. The ``ThotProject.dev_mode()`` method returns ``True`` if the script is being run by the :ref:`runner`, and ``False`` if it's being run manually, i.e. from the console or within a Jupyter Notebook. 
 
 .. _runner:
 

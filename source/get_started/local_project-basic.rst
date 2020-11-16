@@ -270,7 +270,7 @@ Let's go through and break down what each chunk of code is doing.
 .. 	* - Line No.
 .. 	  - Description
 .. 	* - 2-3
-.. 	  - Import the packages we're going to use, namely Pandas and Thot. In this case we only need to use a small part: LocalProject.
+.. 	  - Import the packages we're going to use, namely Pandas and Thot. In this case we only need to use a small part: ThotProject.
 .. 	* - 6
 .. 	  - Initialize the Thot project, giving us access to all the data stored within it.
 .. 	* - 9
@@ -285,7 +285,7 @@ Let's go through and break down what each chunk of code is doing.
 .. 	  - Save the statistics to the new Asset.
 
 
-+ **lines 2-3:** Import the packages we're goin to use, namely Pandas and Thot. In this case we only need to use a small part: LocalProject.
++ **lines 2-3:** Import the packages we're goin to use, namely Pandas and Thot. In this case we only need to use a small part: ThotProject.
 
 + **line 6:** Initialize the Thot project, giving us access to all the data stored within it.
 
@@ -489,13 +489,13 @@ Script Associations
 Analysis
 --------
 
-+ To initialize a local Thot project in your Python script.
++ To initialize a Thot project in your Python script.
 
 .. code-block:: python
-	:caption: Initialize a local Thot project.
+	:caption: Initialize a Thot project.
 
-	from thot.thot import LocalProject
-	thot = LocalProject()
+	from thot import ThotProject
+	thot = ThotProject()
 
 + Finding Containers and Assets.
 

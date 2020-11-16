@@ -2,6 +2,8 @@
 Examples
 ########
 
+.. caution::
+	**IN PROGRESS...**
 
 Consider a new drug we are testing. The main hypothesis of our investigation is at what dose the drug should be taken. We will try two different doses, as well as have a control group whose dose is 0. We know from other studies that the sort of drug we are testing affects men and women differently, so we will split our participants by their gender. In each of these groups we will have three participlants. Each participant will come in every ten days, starting from their first dose, to have their blood pressure and heart rate monitored for thirty days. Thus our tree will have six levels:
 

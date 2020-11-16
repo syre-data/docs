@@ -2,6 +2,9 @@
 Thot Utilities
 ##############
 
+.. caution::
+	**IN PROGRESS...**
+
 Thot Utilities are built to automate the common or tedious tasks you may have to perform when managing your local projects.
 
 **********

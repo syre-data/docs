@@ -1,9 +1,9 @@
 # import packages
 import pandas as pd
-from thot.thot import LocalProject
+from thot import ThotProject
 
 # initialize thot project
-thot = LocalProject()
+thot = ThotProject()
 
 # get noise data from asset
 noise_data = thot.find_asset( { 'type': 'noise-data' } )
