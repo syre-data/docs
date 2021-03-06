@@ -8,10 +8,12 @@ These tutorials will get you started using Thot to manage and analyze your data.
    :maxdepth: 2
    :caption: Contents:
 
-   hosted_project-basic
-   hosted_project-advanced
-   local_project-basic
-   local_project-advanced
+   intro
+   desktop-basic
+   cli-basic
+   cli-advanced
+   web-basic
+   web-advanced
    writing_scripts
    utilities
 

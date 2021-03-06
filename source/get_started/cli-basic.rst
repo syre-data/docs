@@ -305,7 +305,7 @@ Now we need to tell Thot which Containers to run this script from. This is done 
 Navigate to the **Recipe A > Batch 1** Container. We create Script Associations by placing a ``_scripts.json`` file in a Container. Go ahead and create this file and paste the contents below inside it.
 
 .. code-block:: JSON
-	:caption: recipe-a/batch-1/_script.json
+	:caption: recipe-a/batch-1/_scripts.json
 
 	[
 		{
