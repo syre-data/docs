@@ -119,7 +119,7 @@ We can now manipulate our DataFrame however we wish, performing analysis as usua
 		'type': 'new-asset',
 		'tags': [ 'data', 'csv' ],
 		'description': 'A newly analyzed Asset.',
-		metadata: {
+		'metadata': {
 			'number_metadata':  3,
 			'string_metadata':  'Nickname',
 			'boolean_metadata': False
