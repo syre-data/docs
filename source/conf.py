@@ -20,13 +20,13 @@ sys.path.insert( 0, os.path.abspath( '../python/' ) )
 # -- Project information -----------------------------------------------------
 
 project = 'Thot Data'
-copyright = '2020, Brian Carlsen'
+copyright = '2021, Brian Carlsen'
 author = 'Brian Carlsen'
 
 # The short X.Y version
-version = '0.2'
+version = '0.3'
 # The full version, including alpha/beta/rc tags
-release = '0.2.0'
+release = '0.3.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,7 +43,8 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.mathjax',
     'recommonmark',
-    'sphinx_panels' # https://sphinx-panels.readthedocs.io/en/latest/
+    'sphinx_panels',  # https://sphinx-panels.readthedocs.io/en/latest/
+    'sphinx_tabs.tabs'  # https://github.com/executablebooks/sphinx-tabs#grouped-tabs
 ]
 
 panels_add_bootstrap_css = False
@@ -95,9 +96,9 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_css_files = [
-	'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css',
-	'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
-	'styles.css'
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
+    'styles.css'
 ]
 
 html_js_files = []

@@ -4,4 +4,6 @@ thot
 .. toctree::
    :maxdepth: 4
 
-   thot
+   core/thot_core
+   lib/python/python
+   cli/thot_cli
