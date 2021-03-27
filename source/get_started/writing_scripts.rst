@@ -150,17 +150,15 @@ It is conventient to test your analysis script on a specific Contain to ensure i
 	from thot import ThotProject
 	thot = ThotProject( 'path/to/test/container' )
 
-However with this arrangement, the script will always use the given Container as the root. Instead, we want to use the designated path only for testing, but allow Thot to set the root Container during the actual analysis. ``thotProject`` has a ``dev_mode()`` method which allows the script to distinguish if Thot is running an analysis, or if you are just testing the script. Here is the canonical pattern for implementing an analysis script that can be tested.
+However with this arrangement, the script will always use the given Container as the root. Instead, we want to use the designated path only for testing, but allow Thot to set the root Container during the actual analysis. ``ThotProject`` has a ``dev_mode()`` method which allows the script to distinguish if Thot is running an analysis, or if you are just testing the script. You can initialize a ``ThotProject`` with the ``dev_root`` parameter for testing, and use the ``dev_mode`` method to only perform certain actions during testing.
 
 .. code-block:: python
 	:caption: Testing a local script.
 
-	root_path = (
-	    'path/to/test/container'
-	    if ThotProject.dev_mode() else
-	    None
-	)
-
-	thot = ThotProject( root_path )
+	thot = ThotProject( dev_root = 'path/to/test/container' )
+	asset = thot.find_asset( {} )
+	if thot.dev_mode():
+		# only run when testing
+		print( asset.name )
 
 In this snippet we see that if the project is being run in "dev mode" we pass the root Container we want to test the script on. If the script is being run in an analysis, though, ``dev_mode()`` will return ``False``, setting the root Container to ``None``, allowing Thot to run the Script on it's associated Containers.
