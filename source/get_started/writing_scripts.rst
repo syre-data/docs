@@ -160,5 +160,3 @@ However with this arrangement, the script will always use the given Container as
 	if thot.dev_mode():
 		# only run when testing
 		print( asset.name )
-
-In this snippet we see that if the project is being run in "dev mode" we pass the root Container we want to test the script on. If the script is being run in an analysis, though, ``dev_mode()`` will return ``False``, setting the root Container to ``None``, allowing Thot to run the Script on it's associated Containers.
