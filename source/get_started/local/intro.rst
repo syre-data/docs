@@ -12,60 +12,45 @@ To perform our analysis we'll use Thot. Thot offers three interfaces: the Comman
 Getting Thot
 ************
 
-Choose your interface
+Thot requires Python (v3) which you can get from the `official Python site <https://www.python.org/downloads/>`_. 
 
-.. tabs::
+After installing Python, you can install Thot and the CLI by running
 
-	.. group-tab:: desktop
+.. code-block:: bash
 
-		Thot requires Python (v3) which you can get from the `official Python site <https://www.python.org/downloads/>`_. 
+	python -m pip install thot-cli
 
-		After installing Python, you can install Thot by running
+This will install both the ``thot-data`` and ``thot-cli`` packages.
 
-		.. code-block:: bash
+**Desktop**
 
-			python -m pip install thot-data
+#. Download the Thot Desktop app, following the links below:
 
-		#. Download the Thot Desktop app, following the links below:
+	* `Windows 10 <https://www.dropbox.com/sh/82zyipnf4giw7na/AABLx-ozn46hqPqU2PafLSnta?dl=0>`_
+	* `Mac Catalina <https://www.dropbox.com/sh/wo6pkc1bpptb2hz/AABelJU5JUVyvubUbH2zYT9Ma?dl=0>`_
+	* `Ubuntu 21+ <https://www.dropbox.com/sh/vh9f4f0pndcxxyl/AADC5gwLqbEJ7Nevaj1diVDPa?dl=0>`_
+	* `Ubuntu 20+ <https://www.dropbox.com/sh/nabl73zkiugxv6o/AADU820YeHbdz8MBk3pVJ1mSa?dl=0>`_
+	* `Ubuntu 16+ <https://www.dropbox.com/sh/dzekrad8lutr4wa/AADDDgI_aBH0ZvDmh-xOtgfga?dl=0>`_
 
-			* `Windows 10 <https://www.dropbox.com/sh/82zyipnf4giw7na/AABLx-ozn46hqPqU2PafLSnta?dl=0>`_
-			* `Ubuntu 20+ <https://www.dropbox.com/sh/nabl73zkiugxv6o/AADU820YeHbdz8MBk3pVJ1mSa?dl=0>`_
-			* `Ubuntu 16+ <https://www.dropbox.com/sh/dzekrad8lutr4wa/AADDDgI_aBH0ZvDmh-xOtgfga?dl=0>`_
+#. Unzip the folder.
+#. Install Thot Desktop
 
-		#. Unzip the folder.
-		#. Install Thot Desktop
+	* **Windows 10:** Run ``ThotDesktopSetup.exe``. If you get a security warning, click on the `More info` button, then click the `Run anyway` button that appears at the bottom.
 
-			* **Windows 10:** Run ``ThotDesktopSetup.exe``. If you get a security warning, click on the `More info` button, then click the `Run anyway` button that appears at the bottom.
+	* **Mac:** Double click on ``ThotDesktop.dmg`` then drag the ThotDesktop icon into the Applications folder.
 
-			* **Ubuntu:** From the terminal run 
+	* **Ubuntu:** From the terminal run 
 
-				.. code-block:: bask
+		.. code-block:: bask
 
-					sudo dpkg -i target/ThotDesktop.deb
+			sudo dpkg -i target/ThotDesktop.deb
 
-		.. note::
-			We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
+.. note::
+	We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
 
-		.. seealso::
-			For additional functionality use our web verison.
+.. seealso::
+	For additional functionality use our web verison.
 
-	.. group-tab:: cli
-
-		Thot requires Python (v3) which you can get from the `official Python site <https://www.python.org/downloads/>`_. 
-
-		After installing Python, you can install Thot and the CLI by running
-
-		.. code-block:: bash
-
-			python -m pip install thot-cli
-
-		This will install both the ``thot-data`` and ``thot-cli`` packages.
-
-		.. note::
-			We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
-
-		.. seealso::
-			For additional functionality use our web verison.
 
 .. toctree::
    :maxdepth: 1

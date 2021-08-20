@@ -1,2 +1,4 @@
+sphinx-rtd-theme
+recommonmark
 sphinx_panels
 sphinx-tabs

@@ -15,9 +15,9 @@ Thot’s core principle is
 Thinking About Thot
 *******************
 
-To achieve this core principle Thot uses **top-down organization** and **bottom-up analysis**, visualized in :numref:`Fig. %s <fig_organization_analysis_model>`. Another way to think about this is outside-in organization and inside-out analysis. This is implemented in a tree structure where each node has access to all the resources below it, and properties are inherited from above.
+To achieve this core principle Thot uses **top-down organization** and **bottom-up analysis**, visualized in :numref:`Fig. %s <fig_organization_analysis_model_inside_out>`. Another way to think about this is outside-in organization and inside-out analysis. This is implemented in a tree structure where each node has access to all the resources below it, and properties are inherited from above.
 
-.. _fig_organization_analysis_model:
+.. _fig_organization_analysis_model_top_down:
 
 .. figure:: /_static/overview/organization-analysis-model.png
 	:align: center
@@ -25,6 +25,8 @@ To achieve this core principle Thot uses **top-down organization** and **bottom-
 	:alt: Top-down organization, bottom-up analysis.
 	:figclass: align-center
 	:class: no-scaled-link
+
+.. _fig_organization_analysis_model_inside_out:
 
 .. figure:: /_static/overview/organization-analysis-model-nested.png
 	:align: center

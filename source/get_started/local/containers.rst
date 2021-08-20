@@ -46,8 +46,6 @@ Setting Up Your Project Tree
 	
 	.. group-tab:: desktop
 
-
-
 		After installing the Thot Desktop app, run it. A folder browser will appear titled **Select Project Root**. This will set the root (top level) of our project. 
 
 		.. figure:: /_static/get_started/local/root_selection.png
@@ -130,7 +128,6 @@ Setting Up Your Project Tree
 
 		=============	=================
 		**Name:** 		Batch 1
-		**Type:** 		batch
 		**Metadata:**	batch (number): 1
 		=============	=================
 
@@ -140,7 +137,6 @@ Setting Up Your Project Tree
 
 		=============	=================
 		**Name:** 		Batch 2
-		**Type:** 		batch
 		**Metadata:**	batch (number): 2
 		=============	=================
 
@@ -151,7 +147,7 @@ Setting Up Your Project Tree
 
 			Creating a child from the File Tree view
 
-		You may have noticed that Thot has added folders and files for us. This is how Thot keeps track of the structure of our projects. Each Container is actually just a filder with a file named ``_container.json`` inside of it. Feel free to explore these files or read the ``CLI`` sections for more information.
+		You may have noticed that Thot has added folders and files for us. This is how Thot keeps track of the structure of our projects. Each Container is actually just a folder with a file named ``_container.json`` inside of it. Feel free to explore these files or read the ``CLI`` sections for more information.
 
 		Great! We've now created our ``Recipe A`` branch, let's flip back to the **Project** view to visualize what we have. Wait... ``Batch 2`` isn't showing up. Let's refresh the project by clicking on the sync icon :fa:`sync-alt, style=fas` in the upper right of the wokspace.
 
@@ -161,6 +157,26 @@ Setting Up Your Project Tree
 			:figclass: align-center
 
 			Project view after creating the Recipe A branch.
+
+
+		**Bulk Editing**
+
+		We forgot to assign a ``type`` to the batches. Luckily, we can do this easyily in one step. To select multiple resources from the Project view ``Ctrl (Cmd) + click`` them. Select ``Batch 1`` and ``Batch 2``. This opens the Bulk Editing menu. Click the ``Properties`` button and set the ``Type`` field. When bulk editing only fields that are set in the edit dialog will be changed. i.e. If you leave a field in the edit dialog blank that value will not be changed for any of the selected Containers or Assets.
+
+		.. figure:: /_static/get_started/local/bulk_edit_menu.png
+			:align: center
+			:alt: Bulk edit menu.
+			:figclass: align-center
+
+			Bulk edit menu.
+		
+		.. admonition:: Try it!
+
+			Click on the ``<`` in the upper right hand of the Project view to open the Search and Select pane. See if you can select both Batches using this method.
+
+			**Tip:** Regular expressions are valid input.
+
+			**Tip:** The ``Metdata`` section should be a JSON object of key-value pairs or an array of keys.
 
 		Now let's create the ``Recipe B`` branch. We could go through the same process we did for ``Recipe A``, manually creating each Container. However, ``Recipe B`` is almost an exact duplicate of ``Recipe A``, so why don't we just copy it? Luckily, Thot Desktop gives us an easy way to do this.
 

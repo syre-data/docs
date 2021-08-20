@@ -15,6 +15,8 @@ To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Co
 
 		Use Thot on the web for additional functionality.
 
+		(Coming soon)
+
 		+++
 
 		.. link-button:: web_basic
@@ -38,6 +40,12 @@ To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Co
 			:type: ref
 			:text: Get Started
 			:classes: btn-outline-primary btn-block stretched-link
+
+.. link-button:: https://join.slack.com/t/thotdata/shared_invite/zt-mnnm7pma-1X7rvNItxgN1MFfNmHhnwA
+   :type: url
+   :text: Join Our Community on Slack
+   :classes: btn-success btn-block
+
 
 Thot Web
 ========
