@@ -26,18 +26,17 @@ This will install both the ``thot-data`` and ``thot-cli`` packages.
 
 #. Download the Thot Desktop app, following the links below:
 
-	* `Windows 10 <https://www.dropbox.com/sh/82zyipnf4giw7na/AABLx-ozn46hqPqU2PafLSnta?dl=0>`_
-	* `Mac Catalina <https://www.dropbox.com/sh/wo6pkc1bpptb2hz/AABelJU5JUVyvubUbH2zYT9Ma?dl=0>`_
-	* `Ubuntu 21+ <https://www.dropbox.com/sh/vh9f4f0pndcxxyl/AADC5gwLqbEJ7Nevaj1diVDPa?dl=0>`_
-	* `Ubuntu 20+ <https://www.dropbox.com/sh/nabl73zkiugxv6o/AADU820YeHbdz8MBk3pVJ1mSa?dl=0>`_
-	* `Ubuntu 16+ <https://www.dropbox.com/sh/dzekrad8lutr4wa/AADDDgI_aBH0ZvDmh-xOtgfga?dl=0>`_
+	* `Windows 10 <https://www.dropbox.com/s/fc9xgocrfdd1sa8/ThotDesktopSetup.exe?dl=1>`_
+	* `Mac Catalina <https://www.dropbox.com/s/dmqh4cpqxgm924a/ThotDesktop.dmg?dl=1>`_
+	* `Ubuntu 21+ <https://www.dropbox.com/s/uwblqyax12yx32i/ThotDesktop.deb?dl=1>`_
+	* `Ubuntu 20+ <https://www.dropbox.com/s/hfkj61d3qyuz8ss/ThotDesktop.deb?dl=1>`_
+	* `Ubuntu 16+ <https://www.dropbox.com/s/8o2ipvvjs9nlv76/ThotDesktop.deb?dl=1>`_
 
-#. Unzip the folder.
 #. Install Thot Desktop
 
 	* **Windows 10:** Run ``ThotDesktopSetup.exe``. If you get a security warning, click on the `More info` button, then click the `Run anyway` button that appears at the bottom.
 
-	* **Mac:** Double click on ``ThotDesktop.dmg`` then drag the ThotDesktop icon into the Applications folder.
+	* **Mac:** Double click on ``ThotDesktop.dmg`` then drag the ThotDesktop icon into the Applications folder. If a warning stating ``Thot Desktop cannot be opened because the developer cannot be verified`` click cancel, open ``Preferences > Security & Privacy`` and at the bottom of the page select ``Open Anyway`` next to the warning for ThotDesktop.
 
 	* **Ubuntu:** From the terminal run 
 
