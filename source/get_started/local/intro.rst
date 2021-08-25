@@ -27,7 +27,7 @@ This will install both the ``thot-data`` and ``thot-cli`` packages.
 #. Download the Thot Desktop app, following the links below:
 
 	* `Windows 10 <https://www.dropbox.com/s/fc9xgocrfdd1sa8/ThotDesktopSetup.exe?dl=1>`_
-	* `Mac Catalina <https://www.dropbox.com/s/dmqh4cpqxgm924a/ThotDesktop.dmg?dl=1>`_
+	* `Mac Catalina <https://www.dropbox.com/s/jscfqp2no22g4yg/ThotDesktop.dmg?dl=1>`_
 	* `Ubuntu 21+ <https://www.dropbox.com/s/uwblqyax12yx32i/ThotDesktop.deb?dl=1>`_
 	* `Ubuntu 20+ <https://www.dropbox.com/s/hfkj61d3qyuz8ss/ThotDesktop.deb?dl=1>`_
 	* `Ubuntu 16+ <https://www.dropbox.com/s/8o2ipvvjs9nlv76/ThotDesktop.deb?dl=1>`_
