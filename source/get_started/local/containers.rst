@@ -103,10 +103,6 @@ Setting Up Your Project Tree
 
 		Let's make the Container for ``Recipe A`` now. 
 
-		.. note::
-
-			Throughout this tutorial, we'll encounter several ways to do the same thing. Once you're familiar with them all, you can choose the one that best suits your workflow.
-
 		From the **Project** view, click the plus icon :fa:`plus-circle, style=fas` of the ``Silent Fireworks`` Container. This opens the **Container Properties** dialog for the child to be added.
 
 		=========	========
