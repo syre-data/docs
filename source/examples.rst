@@ -14,7 +14,7 @@ Consider a new drug we are testing. The main hypothesis of our investigation is 
 5. Day
 6. Experiment
 
-This leads us to the structure tree seen in :numref:`Fig. %s <local_project_organization>`. In this example there would be :math:`3 \,[doses]* 2 \,[\frac{genders}{dose}]* 3 \,[\frac{participants}{gender}] * 4 \,[\frac{days}{participant}]* 2 \,[\frac{experiments}{day}] =  144 \,[experiments]`. Even for this quite limited study managing and aanlyzing this data would be difficult. Using Thot though, we can simplify the process significantly.
+This leads us to the structure tree seen in :numref:`Fig. %s <local_project_organization>`. In this example there would be :math:`3 \,[doses]* 2 \,[\frac{genders}{dose}]* 3 \,[\frac{participants}{gender}] * 4 \,[\frac{days}{participant}]* 2 \,[\frac{experiments}{day}] =  144 \,[experiments]`. Even for this quite limited study managing and anlyzing this data would be difficult. Using Thot though, we can simplify the process significantly.
 
 .. _local_project_organization:
 
