@@ -1,17 +1,18 @@
 .. _local_intro:
 
-#################
-Thot Local: Intro
-#################
-
+########################
+Thot Local: Installation
+########################
 
 Congratulations! You've just been hired as the head of the R+D department at Puzzles Underwater Fireworks company. The city's aquarium just hired us for their annual New Year's Eve extravaganza, and they want to do something extra special this year: fireworks for the fish. Luckily, our team has been working hard for the past six months on two new recipes for silent explosions. A perfect solution so the fish don't get scared. Looks like your first project will be to compare the two recipes to see which is quieter. Good Luck!
 
 To perform our analysis we'll use Thot. Thot offers three interfaces: the Command Line Interface (CLI), Thot Desktop, and Thot Web. The CLI and Thot Desktop are both run from your own computer, while Thot Web runs on Thot's servers and provides additional functionality.
 
-************
-Getting Thot
-************
+
+.. raw:: html
+
+	<h2>Getting Thot</h2>
+
 
 Thot requires Python (v3) which you can get from the `official Python site <https://www.python.org/downloads/>`_. 
 
@@ -19,9 +20,9 @@ After installing Python you can install Thot and the CLI by running
 
 .. code-block:: bash
 
-	python -m pip install thot-cli
+	python3 -m pip install thot-cli
 
-This will install both the ``thot-data`` and ``thot-cli`` packages.
+from your terminal. This will install both the ``thot-data`` and ``thot-cli`` packages.
 
 **Desktop**
 
@@ -45,10 +46,48 @@ This will install both the ``thot-data`` and ``thot-cli`` packages.
 
 			sudo dpkg -i ThotDesktop.deb
 
+
+.. rst-class:: centered
+
+	.. panels::
+
+		**Quick Start**
+		^^^^^^^^^^^^^^^
+
+		:fa:`clock` 15 minutes
+
+		Learn the basics of Thot to get up and running.
+
+		+++
+
+		.. link-button:: quick_start
+			:type: ref
+			:text: Get Quick Started
+			:classes: btn-outline-success btn-block stretched-link
+
+		---
+
+		
+		**Tutorial**
+		^^^^^^^^^^^^
+
+		:fa:`clock` 60 minutes
+
+		Implement a Thot project from scratch to learn all of Thot's functionality.
+		
+		+++
+
+		.. link-button:: tutorial/containers
+			:type: ref
+			:text: Get Started
+			:classes: btn-outline-primary btn-block stretched-link
+
+
 .. note::
 	We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
 
-.. seealso::
+..
+	.. seealso::
 	For additional functionality use our web verison.
 
 
@@ -56,9 +95,7 @@ This will install both the ``thot-data`` and ``thot-cli`` packages.
    :maxdepth: 1
    :caption: Contents:
 
-   containers
-   assets
-   scripts  
-   summary
+   quick_start
+   tutorial/containers
    cheat_sheet
    utilities

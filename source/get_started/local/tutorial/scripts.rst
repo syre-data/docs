@@ -1,6 +1,5 @@
-******************
 Analyzing the Data
-******************
+==================
 
 Now for the fun to start! Let's create our first analysis script. Create a new file in the ``analysis`` folder called ``noise_stats.py``. Copy and paste the following code into the file.
 

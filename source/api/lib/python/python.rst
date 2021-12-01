@@ -8,13 +8,6 @@ Subpackages
 
     thot.db
 
-thot.thot module
-----------------
-
-.. automodule:: thot.thot
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 Module contents
 ---------------

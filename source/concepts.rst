@@ -262,19 +262,15 @@ A simple python script for a local project may look something like
 Testing Scripts
 ---------------
 
-You can test your scripts using the ``LocalProject.dev_mode()`` function along with passing in a test container to act as the temporary root of your project.
+You can test your scripts using the ``dev_root`` argument when initializing a ``ThotProject``.
 
 .. code-block:: python
 
-	root_path = (
-	    'realtive/path/to/test/container'
-	    if ThotProject.dev_mode() else 
-	    None
-	)
+	thot = ThotProject( dev_root = 'path/to/test/container' )
 
-	thot = ThotProject( root_path )
+This allows you to run your scripts in a Python interpreter without analyzing the entire project tree. 
 
-This allows you to run your scripts within the console or a Jupyter Notebook without analyzing the entire project tree. The ``ThotProject.dev_mode()`` method returns ``True`` if the script is being run by the :ref:`runner`, and ``False`` if it's being run manually, i.e. from the console or within a Jupyter Notebook. 
+The ``ThotProject``s also have a ``dev_mode()`` method that returns ``True`` if the script is being run manually (e.g. from the console or within a Jupyter Notebook), and ``False`` if it's being run by the :ref:`runner`. 
 
 .. _runner:
 

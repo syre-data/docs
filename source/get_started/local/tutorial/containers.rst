@@ -1,14 +1,24 @@
 .. include:: <isonum.txt>
 
-***********************
+********
+Tutorial
+********
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   Containers <containers>
+   Assets <assets>
+   Scripts <scripts>
+
+
 Organizing Your Project
-***********************
+=======================
 
 The first thing we need to do is organize our project. Thot uses a tree structure to organize your projects, giving your project different levels. The top level should be the most important grouping to you, becoming less important as you move down the tree. 
 
-For this project the most important thing we need to test is which recipe is quieter, so our top level grouping will be the recipes. Unfortunately, testing underwater fireworks happens to be quite expensive, so we will only be able to make two batches for each recipe. The batches will be our second level. This gives us the tree in :numref:`Fig. %s <local_project_organization>`.
-
-.. _local_project_organization:
+For this project the most important thing we need to test is which recipe is quieter, so our top level grouping will be the recipes. Unfortunately, testing underwater fireworks happens to be quite expensive, so we will only be able to make two batches for each recipe. The batches will be our second level. This gives us the tree shown below.
 
 .. figure:: /_static/examples/fireworks/fireworks-tree.png
 	:align: center
@@ -18,11 +28,10 @@ For this project the most important thing we need to test is which recipe is qui
 	Project tree for the silent fireworks test.
 
 
-**********************
 Creating a New Project
-**********************
+======================
 
-Luckily our researchers have already written the analysis scripts and recorded the data for us, so all we have to do is create a Thot project for our experiments and run the analysis.
+Luckily, our researchers have already recorded the data and written the analysis scripts for us, so all we need to do is create a Thot project for our experiments and run the analysis.
 
 Local projects use your file system as a database. We will begin by making a folder for the project. Let's call it ``fireworks``. One of the main philosophies behind Thot is that data and analysis should be separate. Let's reflect this in our project by creating a ``data`` folder and an ``analysis`` folder.
 
@@ -37,10 +46,8 @@ Local projects use your file system as a database. We will begin by making a fol
 		We will build our project tree in two ways. First, we'll create the tree for Recipe A by hand, to get a sense of how Thot uses our folders as a database. And second, we will use Thot's Utilities package to build the tree for Recipe B, automating the process.
 
 
-
-****************************
 Setting Up Your Project Tree
-****************************
+============================
 
 .. tabs::
 	
@@ -55,7 +62,7 @@ Setting Up Your Project Tree
 
 			Select Project Root dialog.
 
-		Navigate to the ``data`` folder we just created and click **Open**. An alert titled **Initialize Thot Container** stating that the selected folder is not a Thot Contiainer, and asking if we would like to make it one. Click **Yes**.
+		Navigate to the ``data`` folder we just created and click **Open**. An alert titled **Initialize Thot Container** will appear stating that the selected folder is not a Thot Contiainer, and asking if we would like to make it one. Click **Yes**.
 
 		.. figure:: /_static/get_started/local/init_container.png
 			:align: center
@@ -110,7 +117,7 @@ Setting Up Your Project Tree
 		**Type:** 	recipe
 		=========	========
 
-		We'll also add metadata to this Container. This allows us to attach data to our data. Child Containers inherit the metadata from their ancestors, but can overwrite it by declaring a new value with the same name.
+		We'll also add metadata to this Container. This allows us to attach metadata to our data. Child Containers inherit the metadata from their ancestors, but can overwrite it by declaring a new value with the same name.
 
 		To add metadata click on the **Add Metadata** button and enter the following metadata.
 
@@ -157,7 +164,7 @@ Setting Up Your Project Tree
 
 		**Bulk Editing**
 
-		We forgot to assign a ``type`` to the batches. Luckily, we can do this easyily in one step. To select multiple resources from the Project view ``Ctrl (Cmd) + click`` them. Select ``Batch 1`` and ``Batch 2``. This opens the Bulk Editing menu. Click the ``Properties`` button and set the ``Type`` field. When bulk editing only fields that are set in the edit dialog will be changed. i.e. If you leave a field in the edit dialog blank that value will not be changed for any of the selected Containers or Assets.
+		We forgot to assign a ``type`` to the batches. Luckily, we can do this easyily in one step. To select multiple resources from the Project view :kbd:`Ctrl (Cmd) + click` them. Select ``Batch 1`` and ``Batch 2``. This opens the Bulk Editing menu. Click the ``Properties`` button and set the ``Type`` field. When bulk editing only fields that are set in the edit dialog will be changed. i.e. If you leave a field in the edit dialog blank that value will not be changed for any of the selected Containers or Assets.
 
 		.. figure:: /_static/get_started/local/bulk_edit_menu.png
 			:align: center
@@ -191,8 +198,7 @@ Setting Up Your Project Tree
 
 	.. group-tab:: cli
 
-		Recipe A
-		========
+		**Recipe A**
 
 		Move into the ``data`` folder. Here we will add a file called ``_container.json``. Adding this file to a folder tells Thot that this folder is a Container. What do Containers do? Well, they Contain things. Namely, they can contain other Containers, Assets, and Script Associations. We'll get to the Assets and Script Associations later on.
 
@@ -263,8 +269,7 @@ Setting Up Your Project Tree
 			|			|__ _container.json
 			|__ analysis
 
-		Recipe B
-		========
+		**Recipe B**
 
 		Now that we have the hang of making Containers by hand, let's speed up the process and automate it. To do this we'll use Thot's Utilities. Open up a terminal or command line and navigate to the project root (``data`` folder). Enter the command
 

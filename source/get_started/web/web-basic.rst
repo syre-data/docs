@@ -37,7 +37,7 @@ Luckily our researchers have already written the analysis scripts for us, and ta
 
 .. only:: builder_html or readthedocs
 
-	:download:`Click here to download the project. </_static/examples/fireworks/hosted/fireworks.zip>`
+	:download:`Click here to download the project. </_static/examples/fireworks/raw/fireworks.zip>`
 
 From your home dashboard, click on the :badge:`Projects, badge-primary` button, then click the :badge:`New, badge-primary` button. This will take you to the New Project editor. The first thing you'll see here is a box, called a Container, and a tools panel. Containers are the organizational units of a Thot project. 
 

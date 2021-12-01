@@ -44,7 +44,9 @@ extensions = [
     'sphinx.ext.mathjax',
     'recommonmark',
     'sphinx_panels',  # https://sphinx-panels.readthedocs.io/en/latest/
-    'sphinx_tabs.tabs'  # https://github.com/executablebooks/sphinx-tabs#grouped-tabs
+    'sphinx_tabs.tabs',  # https://github.com/executablebooks/sphinx-tabs#grouped-tabs,
+    'sphinx_copybutton',  # https://sphinx-copybutton.readthedocs.io/en/latest/
+    # 'sphinx_thot_custom'
 ]
 
 panels_add_bootstrap_css = False

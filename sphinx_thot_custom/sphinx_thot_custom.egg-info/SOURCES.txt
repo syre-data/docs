@@ -1,0 +1,9 @@
+README.md
+setup.py
+sphinx_thot_custom/__init__.py
+sphinx_thot_custom/roles.py
+sphinx_thot_custom.egg-info/PKG-INFO
+sphinx_thot_custom.egg-info/SOURCES.txt
+sphinx_thot_custom.egg-info/dependency_links.txt
+sphinx_thot_custom.egg-info/requires.txt
+sphinx_thot_custom.egg-info/top_level.txt

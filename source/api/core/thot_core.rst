@@ -7,3 +7,4 @@ Subpackages
 .. toctree::
 
     thot_core.classes
+    thot_core.db

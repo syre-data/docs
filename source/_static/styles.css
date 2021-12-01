@@ -1,0 +1,5 @@
+.btn-outline-success > span,
+.btn-outline-primary > span,
+.btn-outline-danger > span {
+	color:  inherit;
+}

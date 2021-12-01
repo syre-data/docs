@@ -1,6 +1,5 @@
-*******
 Summary
-*******
+=======
 
 **Congratulations!** You just built your first Thot project, building it from scratch and analyzing the data to come to a final conclusion. We've only touched on the functionality of Thot, and with such a small project it's hard to get a sense of the power thot gives you in analyzing larger projects. To learn more about this you can go through the advanced tutorial (coming soon) and learn even more.
 

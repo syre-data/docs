@@ -1,9 +1,10 @@
 .. include:: <isonum.txt>
 
-***************************
+
 Adding Data to Your Project
-***************************
-Now that we have our tree, we can add data. Most often data is added to the lowest level Containers in our project, because these are the things we actually run experiments on. Luckily our researchers just finished up with their experiments and have provided you with the download link.
+===========================
+
+Now that we have our tree, we can add data. Most often data is added to the lowest level Containers in our project because these are the things we actually run experiments on. Luckily our researchers just finished up with their experiments and have provided you with the download link.
 
 .. only:: builder_html or readthedocs
 
@@ -116,7 +117,7 @@ In Thot, any data file we want to analyze -- CSV, text, images, binary, anything
 				|__ analysis
 
 
-Wonderful! We've now created our project strucutre and added our data. Next we'll look at how to analyze the data using Thot Scripts.
+Wonderful! We've now created our project structure and added our data. Next we'll look at how to analyze the data using Thot Scripts.
 
 .. only:: builder_html or readthedocs
 
