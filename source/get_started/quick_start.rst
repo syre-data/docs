@@ -409,7 +409,7 @@ Analysis of a Thot project starts at the bottom most level of the project tree a
 
 	Thot exposes a simple interface that is meant to wrap around the actual analysis that you do in your scripts. We won't cover how this works in this tutorial for the sake of time, so we encourage you to open the provided analysis files and take a look for yourself. The longest is 20 lines of code with comments explaining each line.
 
-	You can learn more in the :doc:`Analyzing the Data <tutorial/scripts>` chapter of the :doc:`full tutorial <tutorial/containers>`, or in the :doc:`Writing Scripts <../writing_scripts>` tutorial.
+	You can learn more in the :doc:`Analyzing the Data <full_tutorial/scripts>` chapter of the :doc:`full tutorial <full_tutorial/index>`, or in the :doc:`Writing Scripts <writing_scripts>` tutorial.
 
 .. tabs::
 

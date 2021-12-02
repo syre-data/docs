@@ -3,10 +3,10 @@ import pandas as pd
 from thot import ThotProject
 
 # intialize thot
-thot = ThotProject()
+db = ThotProject()
 
 # prepare data
-recipe_stats = thot.find_assets( { 'type': 'recipe-stats' } )
+recipe_stats = db.find_assets( { 'type': 'recipe-stats' } )
 
 df = []
 for stat in recipe_stats:
@@ -26,7 +26,7 @@ comparison_properites = {
 	'file': 'recipe_comparison.csv' 
 }
 
-comparison_path = thot.add_asset( comparison_properites, 'recipe_comparison' )
+comparison_path = db.add_asset( comparison_properites, 'recipe_comparison' )
 df.to_csv( comparison_path )
 
 # create bar char and export
@@ -42,5 +42,5 @@ bar_properties = {
 	'file': 'recipe_comparison.png'
 }
 
-bar_path = thot.add_asset( bar_properties, 'recipe_bar' )
+bar_path = db.add_asset( bar_properties, 'recipe_bar' )
 ax.get_figure().savefig( bar_path, format = 'png' )

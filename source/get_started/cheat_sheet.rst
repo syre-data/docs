@@ -156,18 +156,18 @@ Analysis
 	:caption: Initialize a Thot project.
 
 	from thot import ThotProject
-	thot = ThotProject()
+	db = ThotProject()
 
 + Finding Containers and Assets.
 
 .. code-block:: python
 	:caption: Finding Containers and Assets.
 
-	container  = thot.find_container(  { 'name': 'Basic Container' } )
-	containers = thot.find_containers( { 'type': 'basic-container' } )
+	container  = db.find_container(  { 'name': 'Basic Container' } )
+	containers = db.find_containers( { 'type': 'basic-container' } )
 
-	asset  = thot.find_asset(  { 'name': 'Basic Asset' } )
-	assets = thot.find_assets( { 'type': 'basic-asset' } )
+	asset  = db.find_asset(  { 'name': 'Basic Asset' } )
+	assets = db.find_assets( { 'type': 'basic-asset' } )
 
 + Getting the information from a Container or Asset is the same.
 

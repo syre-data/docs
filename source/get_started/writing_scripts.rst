@@ -72,7 +72,7 @@ To use an anaylsis script for a Thot project as a Script, first load the Thot pr
 	:caption: Loading a Thot project into a script.
 
 	from thot import ThotProject
-	thot = ThotProject()
+	db = ThotProject()
 
 
 To consume an Asset, find it using it's descriptors.
@@ -80,16 +80,16 @@ To consume an Asset, find it using it's descriptors.
 .. code-block:: python
 	:caption: Finding Assets.
 
-	asset  = thot.find_asset(  { 'name': 'Basic Asset' } )
-	assets = thot.find_assets( { 'type': 'basic-asset' } )
+	asset  = db.find_asset(  { 'name': 'Basic Asset' } )
+	assets = db.find_assets( { 'type': 'basic-asset' } )
 
 If we need properties from a Container, we can find those too.
 
 .. code-block:: python
 	:caption: Finding Containers.
 
-	container  = thot.find_container(  { 'name': 'Basic Container' } )
-	containers = thot.find_containers( { 'type': 'basic-container' } )
+	container  = db.find_container(  { 'name': 'Basic Container' } )
+	containers = db.find_containers( { 'type': 'basic-container' } )
 
 The properties of Assets and Containers are accessed as properties. Of particular interest are is ``Asset.file``, ``Asset.metadata``, and ``Container.metadata``.
 
@@ -126,7 +126,7 @@ We can now manipulate our DataFrame however we wish, performing analysis as usua
 		}
 	}
 	
-	new_asset_path = thot.add_asset( asset_properties )
+	new_asset_path = db.add_asset( asset_properties )
 	df.to_csv( new_asset_path )
 
 There are no limits on how many Assets a Script can consume or produce. Scripts can also be given a priority, dictating their run order. This is important if multiple Scripts are associated to a single Container, and one Script depends on the Asset created by another.
@@ -148,15 +148,15 @@ It is conventient to test your analysis script on a specific Contain to ensure i
 
 	# for local projects only
 	from thot import ThotProject
-	thot = ThotProject( dev_root = 'path/to/test/container' )
+	db = ThotProject( dev_root = 'path/to/test/container' )
 
 However with this arrangement, the script will always use the given Container as the root. Instead, we want to use the designated path only for testing, but allow Thot to set the root Container during the actual analysis. ``ThotProject`` has a ``dev_mode()`` method which allows the script to distinguish if Thot is running an analysis, or if you are just testing the script. You can initialize a ``ThotProject`` with the ``dev_root`` parameter for testing, and use the ``dev_mode`` method to only perform certain actions during testing.
 
 .. code-block:: python
 	:caption: Testing a local script.
 
-	thot = ThotProject( dev_root = 'path/to/test/container' )
-	asset = thot.find_asset( {} )
-	if thot.dev_mode():
+	db = ThotProject( dev_root = 'path/to/test/container' )
+	asset = db.find_asset( {} )
+	if db.dev_mode():
 		# only run when testing
 		print( asset.name )

@@ -1,8 +1,8 @@
-.. _local_intro:
+.. _install_thot:
 
-########################
-Thot Local: Installation
-########################
+###############
+Installing Thot
+###############
 
 Congratulations! You've just been hired as the head of the R+D department at Puzzles Underwater Fireworks company. The city's aquarium just hired us for their annual New Year's Eve extravaganza, and they want to do something extra special this year: fireworks for the fish. Luckily, our team has been working hard for the past six months on two new recipes for silent explosions. A perfect solution so the fish don't get scared. Looks like your first project will be to compare the two recipes to see which is quieter. Good Luck!
 
@@ -46,56 +46,5 @@ from your terminal. This will install both the ``thot-data`` and ``thot-cli`` pa
 
 			sudo dpkg -i ThotDesktop.deb
 
-
-.. rst-class:: centered
-
-	.. panels::
-
-		**Quick Start**
-		^^^^^^^^^^^^^^^
-
-		:fa:`clock` 15 minutes
-
-		Learn the basics of Thot to get up and running.
-
-		+++
-
-		.. link-button:: quick_start
-			:type: ref
-			:text: Get Quick Started
-			:classes: btn-outline-success btn-block stretched-link
-
-		---
-
-		
-		**Tutorial**
-		^^^^^^^^^^^^
-
-		:fa:`clock` 60 minutes
-
-		Implement a Thot project from scratch to learn all of Thot's functionality.
-		
-		+++
-
-		.. link-button:: tutorial/containers
-			:type: ref
-			:text: Get Started
-			:classes: btn-outline-primary btn-block stretched-link
-
-
 .. note::
 	We will use Pandas for the analysis. To get Pandas you can `visit their website  <https://pandas.pydata.org/getting_started.html>`_.
-
-..
-	.. seealso::
-	For additional functionality use our web verison.
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   quick_start
-   tutorial/containers
-   cheat_sheet
-   utilities

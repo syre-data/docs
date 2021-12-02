@@ -9,16 +9,8 @@ Data management and analysis software.
    :maxdepth: 1
    :caption: Contents:
 
-   overview
    get_started/index
+   overview
    concepts
    examples
-   api/index
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   utilities

@@ -3,13 +3,13 @@ import pandas as pd
 from thot import ThotProject
 
 # initialize thot
-thot = ThotProject()
+db = ThotProject()
 
 # get recipe container
-recipe = thot.find_container( { '_id': thot.root } )
+recipe = db.find_container( { '_id': db.root } )
 
 # get noise statistics data
-noise_stats = thot.find_assets( { 'type': 'noise-stats' } )
+noise_stats = db.find_assets( { 'type': 'noise-stats' } )
 
 # create combined dataframe 
 df = []
@@ -39,5 +39,5 @@ stat_properties = {
 	'file': 'recipe-stats.pkl'
 }
 
-stats_path = thot.add_asset( stat_properties, 'recipe_stats' )
+stats_path = db.add_asset( stat_properties, 'recipe_stats' )
 stats.to_pickle( stats_path )

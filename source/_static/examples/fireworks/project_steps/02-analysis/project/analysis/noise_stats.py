@@ -3,10 +3,10 @@ import pandas as pd
 from thot import ThotProject
 
 # initialize thot project
-thot = ThotProject()
+db = ThotProject()
 
 # get noise data from asset
-noise_data = thot.find_asset( { 'type': 'noise-data' } )
+noise_data = db.find_asset( { 'type': 'noise-data' } )
 
 # import noise data into a pandas data frame
 df = pd.read_csv( noise_data.file, header = 0, index_col = 0, names = [ 'trial', 'volume' ] )
@@ -21,7 +21,7 @@ stats_properties = {
 	'file': 'noise-stats.csv'
 }
 
-stats_path = thot.add_asset( stats_properties, 'noise_stats' )
+stats_path = db.add_asset( stats_properties, 'noise_stats' )
 
 # export the statistics to the new asset
 stats.to_csv( stats_path ) 

@@ -6,56 +6,11 @@ These tutorials will get you started using Thot to manage and analyze your data.
 
 To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Command Line Interface (CLI)**, **Thot Desktop**, and **Thot Web**. The CLI and Thot Desktop are both run from your own computer, while Thot Web runs on Thot’s servers and provides additional functionality.
 
-.. rst-class:: centered
-
-	.. panels::
-
-		**Web**
-		^^^^^^^
-
-		Use Thot on the web for additional functionality.
-
-		(Coming soon)
-
-		+++
-
-		.. link-button:: web_basic
-			:type: ref
-			:text: Get Started
-			:classes: btn-outline-success btn-block stretched-link
-
-		---
-
-		
-		**Local**
-		^^^^^^^^^
-
-		Use Thot on your own computer.
-		
-		(Desktop and CLI)
-		
-		+++
-
-		.. link-button:: local_intro
-			:type: ref
-			:text: Get Started
-			:classes: btn-outline-primary btn-block stretched-link
-
 .. link-button:: https://join.slack.com/t/thotdata/shared_invite/zt-mnnm7pma-1X7rvNItxgN1MFfNmHhnwA
    :type: url
    :text: Join Our Community on Slack
    :classes: btn-success btn-block
 
-
-.. raw:: html
-
-	<h2>Thot Web</h2>h2
-
-Thot Web offers powerful tools for easily building and sharing your Thot projects.
-
-* :fa:`users` Collaborate easily
-* :fa:`upload` Upload data from anywhere
-* :fa:`share-alt` Share your projects
 
 .. raw:: html
 
@@ -78,9 +33,12 @@ Using the CLI is a bit harder to get a grasp of than the Desktop and Web version
 * :fa:`desktop` Runs on your own computer
 * :fa:`code` Powerful operations for bulk editing
 
-Tutorials
-=========
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
 
-+ :doc:`Web <web/web-basic>`
-+ :doc:`Local <local/install>`
-+ :doc:`Writing Scripts <writing_scripts>`
+   install
+   quick_start
+   full_tutorial/index
+   writing_scripts
+   cheat_sheet

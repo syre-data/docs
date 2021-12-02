@@ -22,13 +22,13 @@ Let's go through and break down what each chunk of code is doing.
 .. 	* - 6
 .. 	  - Initialize the Thot project, giving us access to all the data stored within it.
 .. 	* - 9
-.. 	  - Find the Noise Data Asset we made for each batch by search for Assets who have a ``type`` of 'noise-data'.
+.. 	  - Find the Noise Data Asset we made for each batch by search for Assets who have a ``type`` of ``noise-data``.
 .. 	* - 12
 .. 	  - Load the noise data into a Pandas DataFrame.
 .. 	* - 15
 .. 	  - Compute statistics on the noise data.
 .. 	* - 18-24
-.. 	  - Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as its second argument an ``_id`` for the new Asset.
+.. 	  - Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``db.add_asset()`` accepts as its second argument an ``_id`` for the new Asset.
 .. 	* - 27
 .. 	  - Save the statistics to the new Asset.
 
@@ -43,7 +43,7 @@ Let's go through and break down what each chunk of code is doing.
 
 + **line 15:** Compute statistics on the noise data.
 
-+ **lines 18-24:** Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``thot.add_asset()`` accepts as its second argument an ``_id`` for the new Asset.
++ **lines 18-24:** Create a new Asset to store the noise statistics in. Notice that the ``stats_properties`` dictionary we pass in mimics exactly the structure of the ``_asset.json`` files we created earlier. ``db.add_asset()`` accepts as its second argument an ``_id`` for the new Asset.
 
 +  **line 27:** Saves the statistics to the new Asset.
 
@@ -123,7 +123,7 @@ Now we need to tell Thot which Containers to run this script from. This is done 
 
 
 Moving On Up
-============
+------------
 
 Now that we have the statistics for each of our batches we can move up one level in our project tree to compile the statistics for each recipe. Let's first make the analysis script calling it ``recipe_stats.py``.
 
@@ -172,9 +172,9 @@ Let's build our final analysis script now so we can see which recipe is better. 
 
 Let's breakdown the new concepts:
 
-+ **line 14:** Use the recipe metadata from the Asset to name the data.
++ **line 15:** Use the recipe metadata from the Asset to name the data.
 
-+ **line 28, 44:** We've already seen that we can pull in multiple Assets into our scripts. Here we also see that we can create multiple Assets in a single script. Also notice that one Asset is a CSV text file, while the other is a PNG image file. Assets can be any sort of file.
++ **line 29, 45:** We've already seen that we can pull in multiple Assets into our scripts. Here we also see that we can create multiple Assets in a single script. Also notice that one Asset is a CSV text file, while the other is a PNG image file. Assets can be any sort of file.
 
 .. tabs::
 

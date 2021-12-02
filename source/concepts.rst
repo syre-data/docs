@@ -238,11 +238,11 @@ A simple python script for a local project may look something like
 	import pandas as pd
 	from thot import ThotProject
 
-	thot = ThotProject() # set up local project
+	db = ThotProject() # set up local project
 
 	# retrieve data
-	sample = thot.find_container( { 'type': 'sample'  } )
-	data = thot.find_asset( { 'type': 'times' } )
+	sample = db.find_container( { 'type': 'sample'  } )
+	data = db.find_asset( { 'type': 'times' } )
 
 	# analyze data
 	df = pd.read_csv( data.file )
@@ -255,7 +255,7 @@ A simple python script for a local project may look something like
 		'name': '{} Stats'.format( sample.name )
 	}
 
-	asset_path = thot.add_asset( stats_props, 'stats', overwrite = True )
+	asset_path = db.add_asset( stats_props, 'stats', overwrite = True )
 	stats.to_csv( asset_path )
 
 
@@ -266,7 +266,7 @@ You can test your scripts using the ``dev_root`` argument when initializing a ``
 
 .. code-block:: python
 
-	thot = ThotProject( dev_root = 'path/to/test/container' )
+	db = ThotProject( dev_root = 'path/to/test/container' )
 
 This allows you to run your scripts in a Python interpreter without analyzing the entire project tree. 
 
@@ -281,7 +281,7 @@ Once your project is set up you use the Runner to evaluate it.
 
 .. code-block:: shell
 
-	python -m thot.runner [--root <path/to/tree>] [--scripts [ <script_1>, <script_2>, ... ] ]
+	thot run [--root <path/to/tree>] [--scripts [ <script_1>, <script_2>, ... ] ]
 
 + ``--root``: Specifies the root container whose tree should be run. This doesn't need to be the root of the project. If not included the current directory is used as the root. 
 

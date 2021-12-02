@@ -1,17 +1,5 @@
 .. include:: <isonum.txt>
 
-********
-Tutorial
-********
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   Containers <containers>
-   Assets <assets>
-   Scripts <scripts>
-
 
 Organizing Your Project
 =======================
@@ -29,7 +17,7 @@ For this project the most important thing we need to test is which recipe is qui
 
 
 Creating a New Project
-======================
+----------------------
 
 Luckily, our researchers have already recorded the data and written the analysis scripts for us, so all we need to do is create a Thot project for our experiments and run the analysis.
 
@@ -47,7 +35,7 @@ Local projects use your file system as a database. We will begin by making a fol
 
 
 Setting Up Your Project Tree
-============================
+----------------------------
 
 .. tabs::
 	
