@@ -42,7 +42,7 @@ from your terminal. This will install both the ``thot-data`` and ``thot-cli`` pa
 
 	* **Ubuntu:** From the terminal run 
 
-		.. code-block:: bask
+		.. code-block:: bash
 
 			sudo dpkg -i ThotDesktop.deb
 

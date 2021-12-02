@@ -218,7 +218,7 @@ Setting Up Your Project Tree
 		.. note::
 			When naming files and folders avoid using spaces. Use underscores (_) or hyphens (-) instead.
 
-		Notice that we didn't include the ``description`` data in the Container file for Recipe A. If we're not going to use a field we can just leave it out. We also added a new ``metadata`` field. This allows us to attach data to our data. Child Containers inherit the metadata from their ancestors, but can overwrite it by declaring a new value with the same name.
+		Notice that we didn't include the ``description`` data in the Container file for Recipe A. If we're not going to use a field we can just leave it out. We also added a new ``metadata`` field. This allows us to attach metadata to our data. Child Containers inherit the metadata from their ancestors, but can overwrite it by declaring a new value with the same name.
 
 		On to the batches. From the Recipe A Container, make two new folders called ``batch-1`` and ``batch-2`` and make them Containers.
 

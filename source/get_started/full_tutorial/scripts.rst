@@ -100,7 +100,7 @@ Now we need to tell Thot which Containers to run this script from. This is done 
 
 		This tells Thot to run the ``noise_stats.py`` script from this Container. The ``script`` field is the path to the script to run, it can be a relative or absolute path. The special ``root:`` directive points to the project root.
 
-		Before adding the script to the rest of the batches, let's try it out.
+		Before adding the script to the rest of the batches, let's try it out. In your terminal run
 
 		.. code-block:: bash
 			
