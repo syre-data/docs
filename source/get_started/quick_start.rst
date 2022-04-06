@@ -465,7 +465,7 @@ Analysis of a Thot project starts at the bottom most level of the project tree a
 
 		.. code-block:: bash
 
-			thot utils add_scripts --search '{ "type": "recipe" }' --scripts '[ { "script": "root:/analysis/recipe_stats.py" } ]'
+			thot utils add_scripts --search '{ "type": "recipe" }' --scripts '[ { "script": "root:/../analysis/recipe_stats.py" } ]'
 
 
 		You should see an output similar to
