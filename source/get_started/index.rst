@@ -16,6 +16,12 @@ To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Co
 
 	<h2>Thot Desktop</h2>
 
+
+.. warning::
+
+   Thot Desktop is currently in beta, so some features may not work.
+   If you have any questions or comments, please `join our Slack channel <https://join.slack.com/t/thotdata/shared_invite/zt-mnnm7pma-1X7rvNItxgN1MFfNmHhnwA>`_ and post it there.
+
 Thot Desktop is a user-friendly graphical interface for building and analyzing Thot projects on your own computer.
 
 * :fa:`desktop` Runs on your own computer
