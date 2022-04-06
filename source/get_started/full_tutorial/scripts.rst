@@ -72,6 +72,14 @@ Now we need to tell Thot which Containers to run this script from. This is done 
 
 		Let's run our first analysis! From the **Project** view switch the **Assets** preview so we can see our new Assets being created. Then, when you're ready, click the **Analyze** button in the upper right of the workspace.
 
+		.. warning::
+
+			Running the analysis by pressing the ``Analyze`` button may give you an error. If this occurs please attempt to run the analysis from the command line.
+
+			To do this open up a terminal (Anaconda prompt on Windows) navigate to teh project root (**data** folder) and run ``thot run``.
+
+			More information is available in the ``cli`` tab of this section.
+
 		.. figure:: /_static/get_started/local/noise_stats_analysis.png
 			:align: center
 			:alt: Analyze button.

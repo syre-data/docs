@@ -427,6 +427,14 @@ Analysis of a Thot project starts at the bottom most level of the project tree a
 
 		We're almost there now! Let's change our preview back to ``Assets`` and click the ``Analyze`` button to run our analysis.
 
+		.. warning::
+
+			Running the analysis by pressing the ``Analyze`` button may give you an error. If this occurs please attempt to run the analysis from the command line.
+
+			To do this open up a terminal (Anaconda prompt on Windows) navigate to teh project root (**data** folder) and run ``thot run``.
+
+			More information is available in the ``cli`` tab of this section.
+
 		.. figure:: /_static/get_started/local/analyze-quick_start.png
 				:align: center
 				:alt: Analyze button.
@@ -439,6 +447,45 @@ Analysis of a Thot project starts at the bottom most level of the project tree a
 
 	.. group-tab:: cli
 
+		We'll now assign which the scripts we want to run. Navigate to the **data** folder which is the root of the project. We'll first assign the ``recipe_comparison.py`` script to the root of the project. This script will give us our final output.
+
+		To do this we'll create a ``_scripts.json`` file in the **data** folder with the contents
+
+		.. code-block:: json
+
+			[
+			    {
+			        "script": "root:/../analysis/recipe_comparison.py"
+			    }
+			]
+
+		The ``root:`` directive tells Thot to start searching for this script from the root of the project. In this case, because the **data** folder is the root of the project, we move up one level (``..``), then go intot the **analysis** folder and select the ``recipe_comparison.py`` file.
+
+		We could do this by hand for each Container, but that would become tedious. So let's use the Thot CLI instead. We'll next assign the `recipe_stats.py` script to run on the recipe containers. Run
+
+		.. code-block:: bash
+
+			thot utils add_scripts --search '{ "type": "recipe" }' --scripts '[ { "script": "root:/analysis/recipe_stats.py" } ]'
+
+
+		You should see an output similar to
+
+		.. code-block:: bash
+
+			/fireworks/Silent_Fireworks_new/Recipe_A
+			/fireworks/Silent_Fireworks_new/Recipe_B
+
+		which lists all the Containers the script association was added to. You can verify the script was added by navigating to one of the Container's folder (e.g. /fireworks/Silent_Fireworks_new/Recipe_A) and opening the ``_scripts.json`` file.
+
+		We can now repeat this step to assign the ``noise_stats.py`` script to Containers that have a ``type`` of ``batch``.
+
+		We're almost there now! All that's left to do is analyze the project, which we can do by running
+
+		.. code-block:: bash
+
+			thot run
+
+		Once the analysis is complete you should see some new Assets appear. Open them up to see which fireworks recipe is quieter!
 
 
 .. only:: builder_html or readthedocs
