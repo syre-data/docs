@@ -138,8 +138,13 @@ Utilities functions include some generic options that can be applied to all func
 .. warning::
 	Ensure that your JSON is properly quoted. You will likely have to place single quotes around the JSON string, and double quotes around property keys and strings within the object. E.g. ``'{ "string_property": "test string", "boolean_property": true, "number_property": 42 }'``
 
-.. warning::
-	On Windows machines you can not have spaces within quoted text. This results in an ``unrecognized arguments`` error. Thus, the command should read ``'{"string_property":"test string","boolean_property":true,"number_property":42}'``
+.. note::
+	On Windows you must be careful with two things.
+
+	First, you can not have spaces within quoted text. This results in an ``unrecognized arguments`` error. And second, Windows does not interpret single quotes (``'``) in the command line, so only double quotes (``"``) can be used. Thus, to enclose strings double quotes must be used, and any double quotes inside the strings must be escaped with a backslash (``\``).
+
+	Thus, the example command above on a Windows machine should be written as ``"{\"string_property\":\"test string\",\"boolean_property\":true,\"number_property\":42}"``
+
 
 Scripts
 ^^^^^^^

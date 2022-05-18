@@ -267,7 +267,7 @@ Setting Up Your Project Tree
 			thot utils add_containers --search '{ "type": "project" }' --containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "b" } } }'
 
 			# For Windows
-			thot utils add_containers --search "{ \"type\": \"project\" }" --containers "{ \"recipe-b\": { \"name\": \"Recipe B\", \"type\": \"recipe\", \"metadata\": { \"recipe\": \"b\" } } }"
+			thot utils add_containers --search "{\"type\":\"project\"}" --containers "{\"recipe-b\":{\"name\":\"Recipe B\",\"type\":\"recipe\",\"metadata\":{\"recipe\":\"b\"}}}"
 
 
 		.. note::
@@ -291,7 +291,7 @@ Setting Up Your Project Tree
 			thot utils add_containers --search '{ "name": "Recipe B" }' --containers '{ "batch-1": { "name": "Batch 1", "type": "batch", "metadata": { "batch": 1 } }, "batch-2": { "name": "Batch 2", "type": "batch", "metadata": { "batch": 2 } } }'
 
 			# For Windows
-			thot utils add_containers --search "{ \"name\": \"Recipe B\" }" --containers "{ \"batch-1\": { \"name\": \"Batch 1\", \"type\": \"batch\", \"metadata\": { \"batch\": 1 } }, \"batch-2\": { \"name\": \"Batch 2\", \"type\": \"batch\", \"metadata\": { \"batch\": 2 } } }"
+			thot utils add_containers --search "{\"name\":\"Recipe B\"}" --containers "{\"batch-1\":{\"name\":\"Batch 1\",\"type\":\"batch\",\"metadata\":{\"batch\":1}},\"batch-2\":{\"name\":\"Batch 2\",\"type\": \"batch\",\"metadata\":{\"batch\":2}}}"
 
 		If you inspect one of the new ``_container.json`` files you'll notice many more properties than the ones we've explored so far. 
 

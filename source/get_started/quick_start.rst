@@ -250,13 +250,13 @@ Setting Up Your Project Tree
 			thot utils add_containers --search '{ "type": "project" }' --containers '{ "recipe-b": { "name": "Recipe B", "type": "recipe", "metadata": { "recipe": "b" } } }'
 
 			# For Windows
-			thot utils add_containers --search "{ \"type\": \"project\" }" --containers "{ \"recipe-b\": { \"name\": \"Recipe B\", \"type\": \"recipe\", \"metadata\": { \"recipe\": \"b\" } } }"
+			thot utils add_containers --search "{\"type\":\"project\"}" --containers "{\"recipe-b\":{\"name\":\"Recipe B\",\"type\":\"recipe\",\"metadata\":{\"recipe\":\"b\"}}}"
 
 
 		.. note::
-			Windows does not interpret single quotes (') in the command line, so only double quotes can be used ("). Thus, to enclose strings double quotes must be used, and any double quotes inside the strings must be escaped with a backslash (\\).
+			Windows does not interpret spaces or single quotes (``'``) in the command line, so all spaces must be removed and only double quotes (``"``) can be used. Thus, to enclose strings double quotes must be used, and any double quotes inside the strings must be escaped with a backslash (``\``).
 
-			To convert from the Mac and Linux syntax to the Windows syntax, first escape all double quotes with a backslash ( ``"`` |rarr| ``\"``), then convert all single quotes into double quotes (``'`` |rarr| ``"``).
+			To convert from the Mac and Linux syntax to the Windows syntax, first escape all double quotes with a backslash ( ``"`` |rarr| ``\"``), then convert all single quotes into double quotes (``'`` |rarr| ``"``). Finally, remove any spaces that are not in a quoted string.
 
 			Throughout this tutorial the Mac and Linux command line syntax will be used, with some examples of the change for Windows. However, it is assumed after the first few examples, you can make the necessary adjustments to the examples yourself.
 
@@ -274,7 +274,7 @@ Setting Up Your Project Tree
 			thot utils add_containers --search '{ "name": "Recipe B" }' --containers '{ "batch-1": { "name": "Batch 1", "type": "batch", "metadata": { "batch": 1 } }, "batch-2": { "name": "Batch 2", "type": "batch", "metadata": { "batch": 2 } } }'
 
 			# For Windows
-			thot utils add_containers --search "{ \"name\": \"Recipe B\" }" --containers "{ \"batch-1\": { \"name\": \"Batch 1\", \"type\": \"batch\", \"metadata\": { \"batch\": 1 } }, \"batch-2\": { \"name\": \"Batch 2\", \"type\": \"batch\", \"metadata\": { \"batch\": 2 } } }"
+			thot utils add_containers --search "{\"name\":\"Recipe B\"}" --containers "{\"batch-1\":{\"name\":\"Batch 1\",\"type\":\"batch\",\"metadata\":{\"batch\":1}},\"batch-2\":{\"name\":\"Batch 2\",\"type\":\"batch\",\"metadata\":{\"batch\":2}}}"
 
 		If you inspect one of the new ``_container.json`` files you'll notice many more properties than the ones we've explored so far. 
 
