@@ -30,9 +30,10 @@ from your terminal. This will install both the ``thot-data`` and ``thot-cli`` pa
 
 	* `Windows 10 <https://thot-data.com/downloads/desktop/windows10/ThotDesktopSetup.exe>`_
 	* `Mac Catalina <https://thot-data.com/downloads/desktop/mac_catalina/ThotDesktop.dmg>`_
-	* `Ubuntu 21+ <https://thot-data.com/downloads/desktop/ubuntu21/ThotDesktop.deb>`_
-	* `Ubuntu 20+ <https://thot-data.com/downloads/desktop/ubuntu20/ThotDesktop.deb>`_
-	* `Ubuntu 16+ <https://thot-data.com/downloads/desktop/ubuntu16/ThotDesktop.deb>`_
+	* `Ubuntu 22 <https://thot-data.com/downloads/desktop/ubuntu22/ThotDesktop.deb>`_
+	* `Ubuntu 21 <https://thot-data.com/downloads/desktop/ubuntu21/ThotDesktop.deb>`_
+	* `Ubuntu 20 <https://thot-data.com/downloads/desktop/ubuntu20/ThotDesktop.deb>`_
+	* `Ubuntu 16 <https://thot-data.com/downloads/desktop/ubuntu16/ThotDesktop.deb>`_
 
 #. Install Thot Desktop
 
