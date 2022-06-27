@@ -25,7 +25,7 @@ The Thot API exposes the ``ThotProject`` class containing five methods:
 
 + **find_containers( <search> ):** Finds and returns a list of Containers matching the search.
 
-+ **find_asset( <search> ):** Finds and returns a single Asset mathcing the search, or ``None`` if none are found.
++ **find_asset( <search> ):** Finds and returns a single Asset matching the search, or ``None`` if none are found.
 
 + **find_assets( <search> ):** Finds and returns a list of Assets matching the search.
 
