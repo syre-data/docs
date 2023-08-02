@@ -33,7 +33,7 @@ release = '0.5.1'
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-needs_sphinx = '7.1'
+needs_sphinx = '6.2'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -85,7 +85,7 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 
 # html_theme = 'default'
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

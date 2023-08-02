@@ -1,5 +1,5 @@
-Sphinx>=7.1
-sphinx-rtd-theme
+Sphinx~6
+furo
 recommonmark
 sphinx_panels
 sphinx-tabs
