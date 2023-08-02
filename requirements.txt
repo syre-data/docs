@@ -1,3 +1,4 @@
+Sphinx>=7.1
 sphinx-rtd-theme
 recommonmark
 sphinx_panels
