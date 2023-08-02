@@ -6,6 +6,14 @@ Quick Start
 ***********
 :fa:`clock` **20 minutes**
 
+
+.. warning::
+
+    These docs are for Thot versions 0.9.x and below.
+
+    For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
+
+
 Our deadline is approaching quickly, so we need to put a rush on this project. Luckily, our engineers have already collected the data and written the analysis scripts. It's up to you to run the analysis and get back to us with the results ASAP!
 
 .. only:: builder_html or readthedocs

@@ -4,6 +4,13 @@
 Writing Scripts
 ###############
 
+
+.. warning::
+
+    These docs are for Thot versions 0.9.x and below.
+
+    For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
+
 Thot Scripts are functions that consume and produce Assets.
 
 .. figure:: /_static/overview/script-model.png

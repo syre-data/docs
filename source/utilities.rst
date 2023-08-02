@@ -2,8 +2,12 @@
 Thot Utilities
 ##############
 
-.. caution::
-	**IN PROGRESS...**
+
+.. warning::
+
+    These docs are for Thot versions 0.9.x and below.
+
+    For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
 
 Thot Utilities is a command line tool built to automate the common or tedious tasks you may have to perform when managing your local projects.
 

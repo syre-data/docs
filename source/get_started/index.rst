@@ -3,9 +3,10 @@ Get Started
 ###########
 
 
-.. warining::
+.. warning::
 
     These docs are for Thot versions 0.9.x and below.
+
     For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
 
 These tutorials will get you started using Thot to manage and analyze your data. They use hands on examples to show you how to do things and demonstrate the concepts Thot is built on.
@@ -22,11 +23,6 @@ To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Co
 
 	<h2>Thot Desktop</h2>
 
-
-.. warning::
-
-   Thot Desktop is currently in beta, so some features may not work.
-   If you have any questions or comments, please `join our Discord <https://discord.gg/Kv2c5XynfV>`_.
 
 Thot Desktop is a user-friendly graphical interface for building and analyzing Thot projects on your own computer.
 

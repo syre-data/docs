@@ -3,9 +3,10 @@ Thot Data
 #########
 
 
-.. warining::
+.. warning::
 
     These docs are for Thot versions 0.9.x and below.
+
     For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
 
 

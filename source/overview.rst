@@ -2,7 +2,14 @@
 Overview
 ########
 
-Thot is a software program used to manage and analyze data. The core software is available as a Python package at PyPI (`pypi.org/project/thot-data <https://pypi.org/project/thot-data/>`_) with open source code on GitHub (`github.com/bicarlsen/thot-data <https://github.com/bicarlsen/thot-data/>`_) and documentation hosted on Read The Docs (`thot-data-docs.readthedocs.io <https://thot-data-docs.readthedocs.io/en/latest/>`__). There is also a hosted service (`thot-data.com <http://thot-data.com/>`_) available that acts as a user interface for the core program. The hosted service uses the Software as a Service (SaaS) architecture to ease the use of the core service and provide additional functionality.
+
+.. warning::
+
+    These docs are for Thot versions 0.9.x and below.
+
+    For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
+
+`Thot <https://thot.so>`_ is a software program to manage and analyze scientific data. 
 
 Thot’s core principle is
 
