@@ -2,13 +2,19 @@
 Get Started
 ###########
 
+
+.. warining::
+
+    These docs are for Thot versions 0.9.x and below.
+    For the versions 0.10.0 and above, please visit `our new tutorials <https://github.com/thot-data/tutorials>`_.
+
 These tutorials will get you started using Thot to manage and analyze your data. They use hands on examples to show you how to do things and demonstrate the concepts Thot is built on.
 
 To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Command Line Interface (CLI)**, **Thot Desktop**, and **Thot Web**. The CLI and Thot Desktop are both run from your own computer, while Thot Web runs on Thot’s servers and provides additional functionality.
 
-.. link-button:: https://join.slack.com/t/thotdata/shared_invite/zt-mnnm7pma-1X7rvNItxgN1MFfNmHhnwA
+.. link-button:: https://discord.gg/Kv2c5XynfV
    :type: url
-   :text: Join Our Community on Slack
+   :text: Join Our Community on Discord
    :classes: btn-success btn-block
 
 
@@ -20,7 +26,7 @@ To perform our analysis we’ll use Thot. Thot offers three interfaces: the **Co
 .. warning::
 
    Thot Desktop is currently in beta, so some features may not work.
-   If you have any questions or comments, please `join our Slack channel <https://join.slack.com/t/thotdata/shared_invite/zt-mnnm7pma-1X7rvNItxgN1MFfNmHhnwA>`_ and post it there.
+   If you have any questions or comments, please `join our Discord <https://discord.gg/Kv2c5XynfV>`_.
 
 Thot Desktop is a user-friendly graphical interface for building and analyzing Thot projects on your own computer.
 
