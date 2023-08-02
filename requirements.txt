@@ -1,4 +1,4 @@
-Sphinx~6
+Sphinx>6,<7
 furo
 recommonmark
 sphinx_panels
